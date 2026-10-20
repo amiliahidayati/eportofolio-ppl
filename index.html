@@ -1,118 +1,54 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Beranda | E-Portofolio PPL Mandiri</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Portofolio PPL Mandiri</title>
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Tambahan CSS Inline untuk merapikan foto dan teks identitas -->
-    <style>
-        .profile {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            margin-bottom: 30px;
-            flex-wrap: wrap; /* Agar responsif di layar kecil */
-        }
-        .profile-img-container {
-            text-align: center;
-        }
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #000; /* Sesuaikan warna border dengan tema Anda */
-            margin-bottom: 10px;
-        }
-        .profile-name {
-            font-size: 20px;
-            font-weight: 700;
-            margin: 0;
-            font-family: 'Bricolage Grotesque', sans-serif;
-        }
-        .profile-sub {
-            font-size: 14px;
-            margin: 2px 0;
-            color: #555;
-        }
-        /* Memastikan dl tetap rapi */
-        .profile dl {
-            margin: 0;
-        }
-    </style>
 </head>
 <body>
 
-<nav class="nav">
-    <a class="brand" href="index.html">E-Portofolio PPL</a>
-    <a class="link active" href="index.html">Beranda</a>
-    <a class="link" href="lk3.html">LK 3 Refleksi</a>
-    <a class="link" href="uts.html">UTS</a>
-    <a class="link" href="uas.html">UAS</a>
-</nav>
+    <nav>
+        <div class="logo">E-Portofolio PPL</div>
+        <ul>
+            <li><a href="index.html" class="active">Profil</a></li>
+            <li><a href="lk3.html">LK 3 Refleksi</a></li>
+            <li><a href="uts.html">UTS</a></li>
+            <li><a href="uas.html">UAS</a></li>
+        </ul>
+    </nav>
 
-<header class="hero">
-    <span class="tag">PPL Mandiri</span>
-    <h1>E-Portofolio Praktik Pengalaman Lapangan</h1>
-    <p>Kumpulan refleksi, tugas, dan bukti pembelajaran selama saya menjalani Praktik Pengalaman Lapangan (PPL) Mandiri.</p>
-</header>
-
-<main>
-    <div class="profile">
-        <!-- Bagian Foto dan Teks Identitas -->
-        <div class="profile-img-container">
-            <!-- Ganti 'foto-amilia.jpg' dengan nama file foto Anda yang sebenarnya -->
-            <img src="Amilia_Profil.jpeg" alt="Foto Amilia Sholikh Hidayati" class="profile-img">
-            <p class="profile-name">Amilia Sholikh Hidayati</p>
-            <p class="profile-sub">Prodi Informatika</p>
-            <p class="profile-sub">PPG Calon Guru</p>
+    <div class="container">
+        <h1>Profil Guru Praktikan</h1>
+        
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: center; margin-bottom: 2rem;">
+            <!-- Ganti dengan foto Anda -->
+            <div style="width: 150px; height: 150px; background-color: var(--biru-muda); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; border: 4px solid var(--kuning-aksen);">
+                FOTO
+            </div>
+            <div>
+                <h2 style="margin-top: 0; border: none;">[Nama Lengkap Anda]</h2>
+                <p><strong>NIM:</strong> [NIM Anda]</p>
+                <p><strong>Program Studi:</strong> [Prodi Anda]</p>
+                <p><strong>Sekolah Mitra:</strong> [Nama Sekolah PPL]</p>
+                <p><strong>Guru Pamong:</strong> [Nama Guru Pamong]</p>
+                <p><strong>Dosen Pembimbing:</strong> [Nama Dosen]</p>
+            </div>
         </div>
 
-        <!-- Bagian Detail Identitas -->
-        <dl>
-            <dt>Nama</dt>
-            <dd>Amilia Sholikh Hidayati</dd>
-            <dt>NIM / NUPTK</dt>
-            <dd>[Nomor Identitas]</dd>
-            <dt>Program</dt>
-            <dd>Informatika</dd>
-            <dt>Sekolah PPL</dt>
-            <dd>[Nama Sekolah]</dd>
-            <dt>Dosen Pembimbing</dt>
-            <dd>[Nama Dosen]</dd>
-            <dt>Guru Pamong</dt>
-            <dd>[Nama Guru Pamong]</dd>
-        </dl>
+        <h2>Selamat Datang</h2>
+        <p>E-Portofolio ini disusun sebagai bukti pelaksanaan Praktik Pengalaman Lapangan (PPL) Mandiri. Di dalamnya memuat refleksi praktik mengajar, produk perencanaan, serta analisis video pembelajaran.</p>
+        
+        <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="lk3.html" class="btn">Lihat LK 3</a>
+            <a href="uts.html" class="btn">Lihat UTS</a>
+            <a href="uas.html" class="btn">Lihat UAS</a>
+        </div>
     </div>
 
-    <section class="block">
-        <h2>Tentang Saya</h2>
-        <p>Tulis perkenalan singkat: latar belakang, mata pelajaran yang diampu, dan harapan Anda dari PPL Mandiri.</p>
-    </section>
-
-    <h2>Isi Portofolio</h2>
-    <div class="menu">
-        <a href="lk3.html">
-            <h3>LK 3 Refleksi Praktik Mengajar Terbimbing</h3>
-            <p>Refleksi atas praktik mengajar yang dibimbing.</p>
-        </a>
-        <a href="uts.html">
-            <h3>UTS</h3>
-            <p>Hasil Ujian Tengah Semester.</p>
-        </a>
-        <a href="uas.html">
-            <h3>UAS</h3>
-            <p>Hasil Ujian Akhir Semester.</p>
-        </a>
-    </div>
-</main>
-
-<footer>© 2026 Amilia Sholikh Hidayati · E-Portofolio Praktik Pengalaman Lapangan (PPL) Mandiri</footer>
+    <footer>
+        &copy; 2026 [Nama Anda] - E-Portofolio PPL Mandiri
+    </footer>
 
 </body>
 </html>
