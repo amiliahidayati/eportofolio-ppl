@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Portofolio PPL Mandiri</title>
+    <title>E-Portofolio PPL Mandiri - Amilia Sholikh Hidayati</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,15 +20,18 @@
 
     <div class="container">
         <h1>Profil Guru Praktikan</h1>
-        
-        <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: center; margin-bottom: 2rem;">
-            <!-- Ganti dengan foto Anda -->
-            <div style="width: 150px; height: 150px; background-color: var(--biru-muda); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; border: 4px solid var(--kuning-aksen);">
-                FOTO
+
+        <div class="profil-wrapper">
+            <div class="foto-frame">
+                <img src="assets/foto.jpg" alt="Foto Profil" class="foto-profil"
+                     onerror="this.style.display='none'; this.parentElement.querySelector('.overlay').style.background='linear-gradient(135deg, #0A3D62, #F6B93B)';">
+                <div class="overlay"></div>
+                <div class="ikon-tengah">👩‍🏫</div>
             </div>
-            <div>
-                <h2 style="margin-top: 0; border: none;">[Nama Lengkap Anda]</h2>
-                <p><strong>NIM:</strong> [NIM Anda]</p>
+
+            <div class="info-profil">
+                <h2>Amilia Sholikh Hidayati</h2>
+                <p><strong>NIM:</strong> 253153743878</p>
                 <p><strong>Program Studi:</strong> [Prodi Anda]</p>
                 <p><strong>Sekolah Mitra:</strong> [Nama Sekolah PPL]</p>
                 <p><strong>Guru Pamong:</strong> [Nama Guru Pamong]</p>
@@ -36,9 +39,14 @@
             </div>
         </div>
 
+        <div class="tentang-saya">
+            <h2>Tentang Saya</h2>
+            <p>Nama saya Amilia Sholikh Hidayati (NIM 253153743878), berasal dari Jombang, Jawa Timur. Saya memiliki hobi menonton film serta membuat foto dan video. Saya dikenal sebagai pribadi yang ceria, mudah bergaul, dan bertanggung jawab dalam menyelesaikan tugas maupun pekerjaan. Saya juga senang belajar hal baru dan terus mengembangkan diri menjadi pribadi yang lebih baik.</p>
+        </div>
+
         <h2>Selamat Datang</h2>
         <p>E-Portofolio ini disusun sebagai bukti pelaksanaan Praktik Pengalaman Lapangan (PPL) Mandiri. Di dalamnya memuat refleksi praktik mengajar, produk perencanaan, serta analisis video pembelajaran.</p>
-        
+
         <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
             <a href="lk3.html" class="btn">Lihat LK 3</a>
             <a href="uts.html" class="btn">Lihat UTS</a>
@@ -47,7 +55,7 @@
     </div>
 
     <footer>
-        &copy; 2026 [Nama Anda] - E-Portofolio PPL Mandiri
+        &copy; 2026 Amilia Sholikh Hidayati - E-Portofolio PPL Mandiri
     </footer>
 
 </body>
