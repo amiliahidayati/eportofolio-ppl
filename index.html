@@ -23,10 +23,8 @@
 
         <div class="profil-wrapper">
             <div class="foto-frame">
-                <img src="assets/foto.jpg" alt="Foto Profil" class="foto-profil"
-                     onerror="this.style.display='none'; this.parentElement.querySelector('.overlay').style.background='linear-gradient(135deg, #0A3D62, #F6B93B)';">
-                <div class="overlay"></div>
-                <div class="ikon-tengah">👩‍🏫</div>
+                <!-- Jika foto belum ada, ganti tag <img> di bawah dengan div class="foto-fallback" berisi inisial -->
+                <img src="assets/foto.jpg" alt="Foto Amilia" class="foto-profil">
             </div>
 
             <div class="info-profil">
@@ -47,7 +45,7 @@
         <h2>Selamat Datang</h2>
         <p>E-Portofolio ini disusun sebagai bukti pelaksanaan Praktik Pengalaman Lapangan (PPL) Mandiri. Di dalamnya memuat refleksi praktik mengajar, produk perencanaan, serta analisis video pembelajaran.</p>
 
-        <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+        <div class="tombol-nav">
             <a href="lk3.html" class="btn">Lihat LK 3</a>
             <a href="uts.html" class="btn">Lihat UTS</a>
             <a href="uas.html" class="btn">Lihat UAS</a>
