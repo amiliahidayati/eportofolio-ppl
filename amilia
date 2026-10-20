@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Portfolio PPL Mandiri</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#1E3A8A',     /* Navy/Royal Blue */
+                            darkblue: '#0F172A', /* Dark Navy */
+                            lightblue: '#3B82F6',/* Light Accent Blue */
+                            gold: '#EAB308',     /* Warm Yellow / Gold */
+                            goldhover: '#CA8A04',
+                            bglight: '#F8FAFC'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient {
+            background: linear-gradient(135deg, #FACC15 0%, #EAB308 100%);
+        }
+        .blue-gradient {
+            background: linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%);
+        }
+    </style>
+</head>
+<body class="bg-brand-bglight text-slate-800 font-sans leading-relaxed antialiased">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="sticky top-0 z-50 bg-brand-blue text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo & Title -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-brand-gold flex items-center justify-center text-brand-darkblue font-extrabold text-xl shadow">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold tracking-tight block">E-Portfolio PPL</span>
+                        <span class="text-xs text-brand-gold font-medium tracking-wide uppercase block">Praktik Pengalaman Lapangan Mandiri</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-1 lg:space-x-2 font-medium text-sm">
+                    <a href="#profil" class="px-3 py-2 rounded-md hover:bg-white/10 transition hover:text-brand-gold flex items-center gap-1.5"><i class="fa-solid fa-user text-xs"></i> Profil Guru</a>
+                    <a href="#lk3" class="px-3 py-2 rounded-md hover:bg-white/10 transition hover:text-brand-gold flex items-center gap-1.5"><i class="fa-solid fa-book-open text-xs"></i> LK 3 Refleksi</a>
+                    <a href="#uts" class="px-3 py-2 rounded-md hover:bg-white/10 transition hover:text-brand-gold flex items-center gap-1.5"><i class="fa-solid fa-file-signature text-xs"></i> UTS (Siklus 1)</a>
+                    <a href="#uas" class="px-3 py-2 rounded-md hover:bg-white/10 transition hover:text-brand-gold flex items-center gap-1.5"><i class="fa-solid fa-award text-xs"></i> UAS (Siklus 2-4)</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2 rounded-md text-white hover:text-brand-gold hover:bg-white/10 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-darkblue border-t border-blue-900 px-4 pt-2 pb-4 space-y-2">
+            <a href="#profil" class="mobile-link block px-3 py-2 rounded-md hover:bg-white/10 hover:text-brand-gold"><i class="fa-solid fa-user mr-2"></i>Profil Guru</a>
+            <a href="#lk3" class="mobile-link block px-3 py-2 rounded-md hover:bg-white/10 hover:text-brand-gold"><i class="fa-solid fa-book-open mr-2"></i>LK 3 Refleksi</a>
+            <a href="#uts" class="mobile-link block px-3 py-2 rounded-md hover:bg-white/10 hover:text-brand-gold"><i class="fa-solid fa-file-signature mr-2"></i>UTS (Siklus 1)</a>
+            <a href="#uas" class="mobile-link block px-3 py-2 rounded-md hover:bg-white/10 hover:text-brand-gold"><i class="fa-solid fa-award mr-2"></i>UAS (Siklus 2-4)</a>
+        </div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="blue-gradient text-white py-16 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <span class="inline-block px-3 py-1 bg-brand-gold/20 text-brand-gold border border-brand-gold/40 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">
+                    Dokumentasi Portofolio Digital
+                </span>
+                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight mb-4">
+                    Praktik Pengalaman Lapangan (PPL) Mandiri
+                </h1>
+                <p class="text-slate-200 text-lg mb-8 leading-relaxed">
+                    Wadah refleksi komprehensif, penyajian rancangan pembelajaran inovatif, dokumen perangkat ajar, serta rekaman video praktik mengajar sebagai bukti transformasi profesionalisme guru.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#profil" class="px-6 py-3 rounded-lg bg-brand-gold text-brand-darkblue font-bold shadow-lg hover:bg-brand-goldhover transition duration-200 flex items-center gap-2">
+                        Eksplorasi Profil & Karya <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                    <a href="#lk3" class="px-6 py-3 rounded-lg border border-white/30 hover:bg-white/10 text-white font-medium transition duration-200">
+                        Lihat Refleksi LK 3
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: PROFIL GURU -->
+    <section id="profil" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-brand-blue flex items-center justify-center gap-3">
+                <i class="fa-solid fa-id-card text-brand-gold"></i> Profil Guru Praktikan
+            </h2>
+            <div class="w-20 h-1 bg-brand-gold mx-auto mt-2 rounded-full"></div>
+            <p class="text-slate-600 mt-2">Identitas Diri, Institusi, dan Visi Reflektif Pembelajaran</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+            <!-- Photo & Basic Info -->
+            <div class="lg:col-span-4 blue-gradient p-8 text-white flex flex-col items-center justify-center text-center">
+                <div class="relative mb-6">
+                    <img src="https://placehold.co/200x200/1E3A8A/FFFFFF?text=Foto+Profil" alt="Foto Profil Guru" class="w-44 h-44 rounded-full border-4 border-brand-gold shadow-xl object-cover">
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-1">Nama Mahasiswa, S.Pd.</h3>
+                <p class="text-brand-gold text-sm font-semibold tracking-wide uppercase mb-4">NIM: 202400123456</p>
+                <p class="text-xs text-slate-200"><i class="fa-solid fa-building-columns mr-1"></i> Program Pendidikan Profesi Guru (PPG)</p>
+            </div>
+
+            <!-- Detailed Academic Info -->
+            <div class="lg:col-span-8 p-6 sm:p-8 flex flex-col justify-between">
+                <div>
+                    <h4 class="text-xl font-bold text-brand-blue mb-6 pb-2 border-b border-slate-100 flex items-center gap-2">
+                        <i class="fa-solid fa-graduation-cap text-brand-gold"></i> Informasi Akademik & Kemitraan
+                    </h4>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-brand-bglight p-4 rounded-xl border-l-4 border-brand-blue">
+                            <span class="text-xs text-slate-500 uppercase font-semibold block">LPTK Penyelenggara</span>
+                            <span class="text-slate-800 font-bold text-base">Universitas Negeri Penyelenggara</span>
+                        </div>
+                        <div class="bg-brand-bglight p-4 rounded-xl border-l-4 border-brand-gold">
+                            <span class="text-xs text-slate-500 uppercase font-semibold block">Sekolah Kemitraan PPL</span>
+                            <span class="text-slate-800 font-bold text-base">SMA / SMP Negeri Kemitraan</span>
+                        </div>
+                        <div class="bg-brand-bglight p-4 rounded-xl border-l-4 border-brand-gold">
+                            <span class="text-xs text-slate-500 uppercase font-semibold block">Bidang Studi</span>
+                            <span class="text-slate-800 font-bold text-base">Pendidikan Matematika / Bahasa / IPA</span>
+                        </div>
+                        <div class="bg-brand-bglight p-4 rounded-xl border-l-4 border-brand-blue">
+                            <span class="text-xs text-slate-500 uppercase font-semibold block">Dosen Pembimbing & Guru Pamong</span>
+                            <span class="text-slate-800 font-bold text-base">Dr. Pembimbing, M.Pd. / Pamong, S.Pd.</span>
+                        </div>
+                    </div>
+
+                    <!-- Visi Reflektif -->
+                    <div class="bg-amber-50/50 rounded-xl p-5 border border-amber-200">
+                        <h5 class="text-md font-bold text-brand-blue mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-lightbulb text-brand-gold"></i> Visi Reflektif Guru
+                        </h5>
+                        <p class="text-slate-700 italic text-sm leading-relaxed">
+                            "Mewujudkan ekosistem pembelajaran yang berpusat pada peserta didik (student-centered), berorientasi pada pengembangan Profil Pelajar Pancasila, serta memanfaatkan teknologi modern secara adaptif untuk membentuk generasi pembelajar sepanjang hayat."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: LK 3 REFLEKSI PRAKTIK MENGAJAR -->
+    <section id="lk3" class="py-16 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold text-brand-gold uppercase tracking-wider bg-brand-blue px-3 py-1 rounded-full">Komponen Evaluasi Reflektif</span>
+                <h2 class="text-3xl font-bold text-brand-blue mt-3 flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-book-open text-brand-gold"></i> LK 3 Refleksi Praktik Mengajar Terbimbing & Mandiri
+                </h2>
+                <div class="w-20 h-1 bg-brand-gold mx-auto mt-2 rounded-full"></div>
+            </div>
+
+            <div class="space-y-4 max-w-5xl mx-auto">
+                <!-- 1. Perencanaan Pembelajaran -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
+                    <button class="w-full p-5 text-left font-bold text-brand-blue flex justify-between items-center" onclick="toggleAccordion(1)">
+                        <span class="flex items-center gap-3 text-lg">
+                            <span class="w-8 h-8 rounded-full bg-brand-blue text-brand-gold flex items-center justify-center text-sm font-bold">1</span>
+                            Analisis Produk Rancangan / Perencanaan Pembelajaran
+                        </span>
+                        <i id="icon-1" class="fa-solid fa-chevron-down text-brand-gold transition-transform duration-300"></i>
+                    </button>
+                    <div id="acc-1" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-700 space-y-4">
+                        <p class="text-sm">Rancangan modul ajar disusun menggunakan pendekatan *Problem Based Learning (PBL)* yang selaras dengan Capaian Pembelajaran (CP) dan Alur Tujuan Pembelajaran (ATP).</p>
+                    </div>
+                </div>
+
+                <!-- 2. Materi Pembelajaran -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
+                    <button class="w-full p-5 text-left font-bold text-brand-blue flex justify-between items-center" onclick="toggleAccordion(2)">
+                        <span class="flex items-center gap-3 text-lg">
+                            <span class="w-8 h-8 rounded-full bg-brand-blue text-brand-gold flex items-center justify-center text-sm font-bold">2</span>
+                            Analisis Materi Pembelajaran yang Disusun & Diterapkan
+                        </span>
+                        <i id="icon-2" class="fa-solid fa-chevron-down text-brand-gold transition-transform duration-300"></i>
+                    </button>
+                    <div id="acc-2" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-700 space-y-4">
+                        <p class="text-sm">Materi dikembangkan dengan mengintegrasikan contoh konteks kehidupan nyata (*contextual learning*) dan konsep pencegahan miskonsepsi bagi siswa.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Media Pembelajaran -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
+                    <button class="w-full p-5 text-left font-bold text-brand-blue flex justify-between items-center" onclick="toggleAccordion(3)">
+                        <span class="flex items-center gap-3 text-lg">
+                            <span class="w-8 h-8 rounded-full bg-brand-blue text-brand-gold flex items-center justify-center text-sm font-bold">3</span>
+                            Analisis Media Pembelajaran
+                        </span>
+                        <i id="icon-3" class="fa-solid fa-chevron-down text-brand-gold transition-transform duration-300"></i>
+                    </button>
+                    <div id="acc-3" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-700 space-y-4">
+                        <p class="text-sm">Penggunaan kombinasi Canva Interactive Slide, LKPD fisik interaktif, serta kuis digital untuk meningkatkan keterlibatan aktif peserta didik.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Video Pembelajaran -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
+                    <button class="w-full p-5 text-left font-bold text-brand-blue flex justify-between items-center" onclick="toggleAccordion(4)">
+                        <span class="flex items-center gap-3 text-lg">
+                            <span class="w-8 h-8 rounded-full bg-brand-blue text-brand-gold flex items-center justify-center text-sm font-bold">4</span>
+                            Analisis Video Pelaksanaan Praktik Mengajar Mandiri
+                        </span>
+                        <i id="icon-4" class="fa-solid fa-chevron-down text-brand-gold transition-transform duration-300"></i>
+                    </button>
+                    <div id="acc-4" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-700 space-y-4">
+                        <p class="text-sm">Refleksi rekaman video menunjukkan pengelolaan waktu dan tahapan sintaks pembelajaran berjalan baik dengan interaksi 2 arah yang dinamis.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Kegiatan Nonmengajar -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
+                    <button class="w-full p-5 text-left font-bold text-brand-blue flex justify-between items-center" onclick="toggleAccordion(5)">
+                        <span class="flex items-center gap-3 text-lg">
+                            <span class="w-8 h-8 rounded-full bg-brand-blue text-brand-gold flex items-center justify-center text-sm font-bold">5</span>
+                            Analisis Kegiatan Nonmengajar
+                        </span>
+                        <i id="icon-5" class="fa-solid fa-chevron-down text-brand-gold transition-transform duration-300"></i>
+                    </button>
+                    <div id="acc-5" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-700 space-y-4">
+                        <p class="text-sm">Keterlibatan aktif dalam penanganan piket harian, pendampingan ekstrakurikuler, administrasi guru, dan rapat komunitas belajar sekolah.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Instrumen Penilaian -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
+                    <button class="w-full p-5 text-left font-bold text-brand-blue flex justify-between items-center" onclick="toggleAccordion(6)">
+                        <span class="flex items-center gap-3 text-lg">
+                            <span class="w-8 h-8 rounded-full bg-brand-blue text-brand-gold flex items-center justify-center text-sm font-bold">6</span>
+                            Instrumen Penilaian & Analisis Hasil Assessment
+                        </span>
+                        <i id="icon-6" class="fa-solid fa-chevron-down text-brand-gold transition-transform duration-300"></i>
+                    </button>
+                    <div id="acc-6" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-700 space-y-4">
+                        <p class="text-sm">Analisis penilaian diagnostik, formatif, dan sumatif menunjukkan tingkat ketuntasan belajar siswa mencapai indikator ketercapaian target.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: UTS (SIKLUS 1) -->
+    <section id="uts" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <span class="text-xs font-bold text-brand-darkblue uppercase tracking-wider bg-brand-gold px-3 py-1 rounded-full">Ujian Tengah Semester</span>
+            <h2 class="text-3xl font-bold text-brand-blue mt-3 flex items-center justify-center gap-3">
+                <i class="fa-solid fa-file-signature text-brand-gold"></i> Produk Praktik Mengajar Terbaik - Siklus 1
+            </h2>
+            <div class="w-20 h-1 bg-brand-gold mx-auto mt-2 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Modul Document -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 p-6 flex flex-col justify-between">
+                <div>
+                    <span class="px-3 py-1 bg-blue-100 text-brand-blue text-xs font-bold rounded-full uppercase">Modul Ajar Siklus 1</span>
+                    <h3 class="text-xl font-bold text-slate-800 my-3">Perangkat Pembelajaran Lengkap Siklus 1</h3>
+                    <p class="text-slate-600 text-sm mb-6">Dokumen perencanaan lengkap beserta RPP/Modul Ajar, Bahan Ajar, LKPD, dan Instrument Asesmen.</p>
+                </div>
+                <a href="#" class="w-full py-3 bg-brand-blue text-white font-bold rounded-lg text-center hover:bg-blue-900 transition">
+                    <i class="fa-solid fa-file-pdf mr-2"></i> Buka / Unduh Modul Ajar
+                </a>
+            </div>
+
+            <!-- Video Embed -->
+            <div class="bg-white rounded-2xl shadow-lg border border-slate-200 p-6 flex flex-col justify-between">
+                <div>
+                    <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full uppercase">Video Pembelajaran</span>
+                    <h3 class="text-xl font-bold text-slate-800 my-3">Video Pelaksanaan Praktik Mengajar Siklus 1</h3>
+                    <div class="relative w-full rounded-xl overflow-hidden bg-black aspect-video mb-4">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Siklus 1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: UAS (SIKLUS 2 S.D 4) -->
+    <section id="uas" class="py-16 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold text-brand-gold uppercase tracking-wider bg-brand-blue px-3 py-1 rounded-full">Ujian Akhir Semester</span>
+                <h2 class="text-3xl font-bold text-brand-blue mt-3 flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-award text-brand-gold"></i> Produk Praktik Mengajar Terbaik - Siklus 2 s.d. 4
+                </h2>
+                <div class="w-20 h-1 bg-brand-gold mx-auto mt-2 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Siklus 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-200 p-5 flex flex-col justify-between">
+                    <div>
+                        <span class="bg-brand-gold text-brand-darkblue text-xs font-extrabold px-2 py-1 rounded uppercase">Siklus 2</span>
+                        <h3 class="text-lg font-bold mt-2 mb-3">Modul & Video Siklus 2</h3>
+                        <div class="relative w-full aspect-video bg-slate-800 rounded-lg overflow-hidden mb-4">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Siklus 2" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <a href="#" class="w-full py-2 bg-brand-blue text-white rounded text-center text-xs font-bold hover:bg-blue-900 transition">Lihat Modul Ajar</a>
+                </div>
+
+                <!-- Siklus 3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-200 p-5 flex flex-col justify-between">
+                    <div>
+                        <span class="bg-brand-gold text-brand-darkblue text-xs font-extrabold px-2 py-1 rounded uppercase">Siklus 3</span>
+                        <h3 class="text-lg font-bold mt-2 mb-3">Modul & Video Siklus 3</h3>
+                        <div class="relative w-full aspect-video bg-slate-800 rounded-lg overflow-hidden mb-4">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Siklus 3" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <a href="#" class="w-full py-2 bg-brand-blue text-white rounded text-center text-xs font-bold hover:bg-blue-900 transition">Lihat Modul Ajar</a>
+                </div>
+
+                <!-- Siklus 4 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-200 p-5 flex flex-col justify-between">
+                    <div>
+                        <span class="bg-brand-gold text-brand-darkblue text-xs font-extrabold px-2 py-1 rounded uppercase">Siklus 4</span>
+                        <h3 class="text-lg font-bold mt-2 mb-3">Modul & Video Siklus 4</h3>
+                        <div class="relative w-full aspect-video bg-slate-800 rounded-lg overflow-hidden mb-4">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Siklus 4" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <a href="#" class="w-full py-2 bg-brand-blue text-white rounded text-center text-xs font-bold hover:bg-blue-900 transition">Lihat Modul Ajar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-darkblue text-slate-400 py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 text-center text-xs space-y-2">
+            <p>© E-Portfolio Praktik Pengalaman Lapangan (PPL) Mandiri.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleAccordion(id) {
+            const content = document.getElementById(`acc-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
