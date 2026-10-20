@@ -1,5 +1,6 @@
 /* ============================================
-   TEMA: BIRU & KUNING — E-Portofolio PPL
+   E-PORTOFOLIO PPL — TEMA BIRU & KUNING
+   Versi bersih & rapi
    ============================================ */
 :root {
     --biru-utama: #0A3D62;
@@ -24,7 +25,7 @@ body {
     line-height: 1.6;
 }
 
-/* ====== Navigasi ====== */
+/* ====== NAVIGASI ====== */
 nav {
     background-color: var(--biru-utama);
     padding: 1rem 2rem;
@@ -33,6 +34,7 @@ nav {
     align-items: center;
     border-bottom: 4px solid var(--kuning-aksen);
     flex-wrap: wrap;
+    gap: 0.5rem;
 }
 nav .logo {
     color: var(--putih);
@@ -58,7 +60,7 @@ nav ul li a.active {
     padding-bottom: 5px;
 }
 
-/* ====== Container Utama ====== */
+/* ====== CONTAINER ====== */
 .container {
     max-width: 1000px;
     margin: 2rem auto;
@@ -82,7 +84,7 @@ h2 {
     margin-top: 2rem;
 }
 
-/* ====== Kartu / Card untuk Analisis ====== */
+/* ====== CARD ====== */
 .card {
     background: var(--abu-terang);
     padding: 1.5rem;
@@ -95,7 +97,7 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-/* ====== Video Embed ====== */
+/* ====== VIDEO ====== */
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -113,7 +115,7 @@ h2 {
     height: 100%;
 }
 
-/* ====== Tombol ====== */
+/* ====== TOMBOL ====== */
 .btn {
     display: inline-block;
     background-color: var(--kuning-aksen);
@@ -129,20 +131,7 @@ h2 {
     background-color: var(--kuning-muda);
 }
 
-/* ====== List Kustom ====== */
-ul.custom-list {
-    list-style: none;
-}
-ul.custom-list li {
-    padding: 10px;
-    background: var(--putih);
-    margin-bottom: 8px;
-    border-radius: 5px;
-    border-left: 4px solid var(--kuning-aksen);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-/* ====== Footer ====== */
+/* ====== FOOTER ====== */
 footer {
     text-align: center;
     padding: 2rem;
@@ -151,75 +140,28 @@ footer {
 }
 
 /* ============================================
-   PROFIL — FOTO MODERN (khusus index.html)
+   BAGIAN PROFIL (KHUSUS INDEX)
    ============================================ */
 .profil-wrapper {
     display: flex;
-    gap: 2.5rem;
+    gap: 2rem;
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 2rem;
     padding: 2rem;
     background: linear-gradient(135deg, #eaf2f8 0%, #fef5e7 100%);
-    border-radius: 20px;
-    position: relative;
-    overflow: hidden;
-}
-.profil-wrapper::before {
-    content: "";
-    position: absolute;
-    width: 220px;
-    height: 220px;
-    background: radial-gradient(circle, rgba(246,185,59,0.25) 0%, transparent 70%);
-    top: -60px;
-    right: -40px;
-    border-radius: 50%;
-    z-index: 0;
-}
-.profil-wrapper::after {
-    content: "";
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    background: radial-gradient(circle, rgba(10,61,98,0.18) 0%, transparent 70%);
-    bottom: -50px;
-    left: -30px;
-    border-radius: 50%;
-    z-index: 0;
+    border-radius: 16px;
 }
 
-/* Frame foto */
+/* Foto: lingkaran dengan border gradient sederhana */
 .foto-frame {
-    position: relative;
     width: 180px;
     height: 180px;
     flex-shrink: 0;
-    z-index: 1;
-}
-.foto-frame::before {
-    content: "";
-    position: absolute;
-    inset: -8px;
     border-radius: 50%;
-    background: conic-gradient(
-        var(--biru-utama) 0deg,
-        var(--kuning-aksen) 120deg,
-        var(--biru-muda) 240deg,
-        var(--kuning-aksen) 360deg
-    );
-    z-index: -1;
-    animation: spin 8s linear infinite;
-}
-.foto-frame::after {
-    content: "";
-    position: absolute;
-    inset: -2px;
-    border-radius: 50%;
-    background: #fff;
-    z-index: -1;
-}
-@keyframes spin {
-    to { transform: rotate(360deg); }
+    padding: 5px;
+    background: linear-gradient(135deg, var(--biru-utama), var(--kuning-aksen));
+    box-shadow: 0 8px 20px rgba(10, 61, 98, 0.25);
 }
 
 .foto-profil {
@@ -227,46 +169,32 @@ footer {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
-    filter: blur(6px) saturate(0.9) brightness(0.95);
-    transition: filter 0.5s ease;
     display: block;
-    position: relative;
+    background-color: var(--biru-muda); /* fallback jika foto tidak ada */
+    filter: blur(5px);
+    transition: filter 0.4s ease;
+}
+.foto-frame:hover .foto-profil {
+    filter: blur(1px);
 }
 
-.foto-frame .overlay {
-    position: absolute;
-    inset: 0;
+/* Jika foto gagal dimuat, tampilkan huruf inisial */
+.foto-fallback {
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    background: linear-gradient(
-        135deg,
-        rgba(10, 61, 98, 0.45) 0%,
-        rgba(246, 185, 59, 0.35) 100%
-    );
-    mix-blend-mode: multiply;
-    pointer-events: none;
-    transition: opacity 0.5s ease;
-}
-.foto-frame .ikon-tengah {
-    position: absolute;
-    inset: 0;
+    background: linear-gradient(135deg, var(--biru-utama), var(--kuning-aksen));
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.5rem;
-    color: rgba(255,255,255,0.85);
-    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    pointer-events: none;
-}
-.foto-frame:hover .foto-profil {
-    filter: blur(2px) saturate(1.1) brightness(1);
-}
-.foto-frame:hover .overlay {
-    opacity: 0.4;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    filter: blur(3px);
 }
 
 /* Info profil */
 .info-profil {
-    z-index: 1;
     flex: 1;
     min-width: 240px;
 }
@@ -289,7 +217,15 @@ footer {
     line-height: 1.8;
 }
 
-/* ====== Responsive ====== */
+/* Tombol navigasi bawah */
+.tombol-nav {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* ====== RESPONSIVE ====== */
 @media (max-width: 600px) {
     .profil-wrapper {
         flex-direction: column;
