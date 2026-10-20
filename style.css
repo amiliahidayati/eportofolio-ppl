@@ -1,8 +1,10 @@
-/* style.css */
+/* ============================================
+   TEMA: BIRU & KUNING — E-Portofolio PPL
+   ============================================ */
 :root {
-    --biru-utama: #0A3D62;    /* Biru tua untuk header/nav */
-    --biru-muda: #3C6382;     /* Biru sekunder */
-    --kuning-aksen: #F6B93B;  /* Kuning untuk tombol/garis bawah */
+    --biru-utama: #0A3D62;
+    --biru-muda: #3C6382;
+    --kuning-aksen: #F6B93B;
     --kuning-muda: #FAD390;
     --putih: #FFFFFF;
     --abu-terang: #F5F6FA;
@@ -22,7 +24,7 @@ body {
     line-height: 1.6;
 }
 
-/* Navigasi */
+/* ====== Navigasi ====== */
 nav {
     background-color: var(--biru-utama);
     padding: 1rem 2rem;
@@ -32,34 +34,31 @@ nav {
     border-bottom: 4px solid var(--kuning-aksen);
     flex-wrap: wrap;
 }
-
 nav .logo {
     color: var(--putih);
     font-weight: bold;
     font-size: 1.2rem;
 }
-
 nav ul {
     list-style: none;
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
 }
-
 nav ul li a {
     color: var(--putih);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
 }
-
-nav ul li a:hover, nav ul li a.active {
+nav ul li a:hover,
+nav ul li a.active {
     color: var(--kuning-aksen);
     border-bottom: 2px solid var(--kuning-aksen);
     padding-bottom: 5px;
 }
 
-/* Container Utama */
+/* ====== Container Utama ====== */
 .container {
     max-width: 1000px;
     margin: 2rem auto;
@@ -73,19 +72,17 @@ h1, h2, h3 {
     color: var(--biru-utama);
     margin-bottom: 1rem;
 }
-
 h1 {
     border-left: 6px solid var(--kuning-aksen);
     padding-left: 15px;
 }
-
 h2 {
     border-bottom: 2px solid var(--kuning-muda);
     padding-bottom: 5px;
     margin-top: 2rem;
 }
 
-/* Kartu / Card untuk Analisis */
+/* ====== Kartu / Card untuk Analisis ====== */
 .card {
     background: var(--abu-terang);
     padding: 1.5rem;
@@ -93,23 +90,21 @@ h2 {
     margin-bottom: 1.5rem;
     border-left: 5px solid var(--biru-muda);
 }
-
 .card h3 {
     color: var(--biru-muda);
     margin-bottom: 0.5rem;
 }
 
-/* Video Embed */
+/* ====== Video Embed ====== */
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* Rasio 16:9 */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     margin: 1rem 0;
     border: 3px solid var(--kuning-aksen);
     border-radius: 8px;
 }
-
 .video-container iframe {
     position: absolute;
     top: 0;
@@ -118,7 +113,7 @@ h2 {
     height: 100%;
 }
 
-/* Tombol */
+/* ====== Tombol ====== */
 .btn {
     display: inline-block;
     background-color: var(--kuning-aksen);
@@ -130,16 +125,14 @@ h2 {
     transition: background 0.3s;
     margin-top: 10px;
 }
-
 .btn:hover {
     background-color: var(--kuning-muda);
 }
 
-/* List Kustom */
+/* ====== List Kustom ====== */
 ul.custom-list {
     list-style: none;
 }
-
 ul.custom-list li {
     padding: 10px;
     background: var(--putih);
@@ -149,10 +142,165 @@ ul.custom-list li {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* Footer */
+/* ====== Footer ====== */
 footer {
     text-align: center;
     padding: 2rem;
     color: var(--biru-muda);
     font-size: 0.9rem;
+}
+
+/* ============================================
+   PROFIL — FOTO MODERN (khusus index.html)
+   ============================================ */
+.profil-wrapper {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #eaf2f8 0%, #fef5e7 100%);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.profil-wrapper::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(246,185,59,0.25) 0%, transparent 70%);
+    top: -60px;
+    right: -40px;
+    border-radius: 50%;
+    z-index: 0;
+}
+.profil-wrapper::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(10,61,98,0.18) 0%, transparent 70%);
+    bottom: -50px;
+    left: -30px;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* Frame foto */
+.foto-frame {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    flex-shrink: 0;
+    z-index: 1;
+}
+.foto-frame::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--biru-utama) 0deg,
+        var(--kuning-aksen) 120deg,
+        var(--biru-muda) 240deg,
+        var(--kuning-aksen) 360deg
+    );
+    z-index: -1;
+    animation: spin 8s linear infinite;
+}
+.foto-frame::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: -1;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.foto-profil {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: blur(6px) saturate(0.9) brightness(0.95);
+    transition: filter 0.5s ease;
+    display: block;
+    position: relative;
+}
+
+.foto-frame .overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: linear-gradient(
+        135deg,
+        rgba(10, 61, 98, 0.45) 0%,
+        rgba(246, 185, 59, 0.35) 100%
+    );
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+.foto-frame .ikon-tengah {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: rgba(255,255,255,0.85);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    pointer-events: none;
+}
+.foto-frame:hover .foto-profil {
+    filter: blur(2px) saturate(1.1) brightness(1);
+}
+.foto-frame:hover .overlay {
+    opacity: 0.4;
+}
+
+/* Info profil */
+.info-profil {
+    z-index: 1;
+    flex: 1;
+    min-width: 240px;
+}
+.info-profil h2 {
+    border: none;
+    margin-top: 0;
+    font-size: 1.7rem;
+}
+.info-profil p {
+    margin-bottom: 0.4rem;
+}
+
+/* Tentang Saya */
+.tentang-saya {
+    margin-top: 2rem;
+}
+.tentang-saya p {
+    text-align: justify;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 600px) {
+    .profil-wrapper {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+    .info-profil h2 {
+        font-size: 1.4rem;
+    }
+    .foto-frame {
+        width: 150px;
+        height: 150px;
+    }
 }
