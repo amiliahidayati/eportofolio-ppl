@@ -1,48 +1,130 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UTS - Produk Siklus 1</title>
-    <link rel="stylesheet" href="style.css">
+    <title>UTS (Siklus 1) - E-Portfolio PPL Mandiri</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#1E3A8A',
+                            darkblue: '#0F172A',
+                            lightblue: '#3B82F6',
+                            gold: '#EAB308',
+                            goldhover: '#CA8A04',
+                            bglight: '#F8FAFC'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
+<body class="bg-brand-bglight text-slate-800 font-sans leading-relaxed antialiased min-h-screen flex flex-col justify-between">
 
-    <nav>
-        <div class="logo">E-Portofolio PPL</div>
-        <ul>
-            <li><a href="index.html">Profil</a></li>
-            <li><a href="lk3.html">LK 3 Refleksi</a></li>
-            <li><a href="uts.html" class="active">UTS</a></li>
-            <li><a href="uas.html">UAS</a></li>
-        </ul>
-    </nav>
+    <!-- HEADER / NAVBAR -->
+    <header class="sticky top-0 z-50 bg-brand-blue text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo & Title -->
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-brand-gold flex items-center justify-center text-brand-darkblue font-extrabold text-xl shadow">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold tracking-tight block">E-Portfolio PPL</span>
+                        <span class="text-xs text-brand-gold font-medium tracking-wide uppercase block">Praktik Pengalaman Lapangan Mandiri</span>
+                    </div>
+                </a>
 
-    <div class="container">
-        <h1>UTS: Produk Terbaik Siklus 1</h1>
-        
-        <h2>1. Rancangan/Perencanaan Pembelajaran Terbaik</h2>
-        <p>Berikut adalah dokumen perencanaan (Modul Ajar/RPP) terbaik yang telah dipilih dari siklus 1.</p>
-        
-        <!-- Ganti dengan link PDF/Drive dokumen Anda -->
-        <a href="LINK_DOKUMEN_ANDA" class="btn" target="_blank">📄 Unduh Modul Ajar (PDF)</a>
-        
-        <div style="margin-top: 1rem; padding: 1rem; background: var(--abu-terang); border-left: 4px solid var(--biru-utama);">
-            <p><strong>Catatan:</strong> Dokumen ini telah melalui revisi berdasarkan masukan dari Guru Pamong dan Dosen Pembimbing.</p>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-1 lg:space-x-2 font-medium text-sm">
+                    <a href="index.html" class="px-3 py-2 rounded-md hover:bg-white/10 transition hover:text-brand-gold flex items-center gap-1.5"><i class="fa-solid fa-user text-xs"></i> Profil Guru</a>
+                    <a href="lk3.html" class="px-3 py-2 rounded-md hover:bg-white/10 transition hover:text-brand-gold flex items-center gap-1.5"><i class="fa-solid fa-book-open text-xs"></i> LK 3 Refleksi</a>
+                    <a href="uts.html" class="px-3 py-2 rounded-md bg-white/20 text-brand-gold flex items-center gap-1.5"><i class="fa-solid fa-file-signature text-xs"></i> UTS (Siklus 1)</a>
+                    <a href="uas.html" class="px-3 py-2 rounded-md hover:bg-white/10 transition hover:text-brand-gold flex items-center gap-1.5"><i class="fa-solid fa-award text-xs"></i> UAS (Siklus 2-4)</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2 rounded-md text-white hover:text-brand-gold hover:bg-white/10 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
         </div>
 
-        <h2>2. Video Pelaksanaan Praktik Mengajar</h2>
-        <p>Video berikut merupakan implementasi dari perencanaan pembelajaran terbaik di atas.</p>
-        
-        <!-- Ganti LINK_YOUTUBE dengan ID video Anda (contoh: dQw4w9WgXcQ) -->
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/ID_VIDEO_ANDA" title="Video Praktik Mengajar" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-darkblue border-t border-blue-900 px-4 pt-2 pb-4 space-y-2">
+            <a href="index.html" class="mobile-link block px-3 py-2 rounded-md hover:bg-white/10 hover:text-brand-gold"><i class="fa-solid fa-user mr-2"></i>Profil Guru</a>
+            <a href="lk3.html" class="mobile-link block px-3 py-2 rounded-md hover:bg-white/10 hover:text-brand-gold"><i class="fa-solid fa-book-open mr-2"></i>LK 3 Refleksi</a>
+            <a href="uts.html" class="mobile-link block px-3 py-2 rounded-md text-brand-gold bg-white/10"><i class="fa-solid fa-file-signature mr-2"></i>UTS (Siklus 1)</a>
+            <a href="uas.html" class="mobile-link block px-3 py-2 rounded-md hover:bg-white/10 hover:text-brand-gold"><i class="fa-solid fa-award mr-2"></i>UAS (Siklus 2-4)</a>
         </div>
-    </div>
+    </header>
 
-    <footer>
-        &copy; 2026 [Nama Anda] - E-Portofolio PPL Mandiri
+    <main class="flex-grow py-12">
+        <section id="uts" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold text-brand-darkblue uppercase tracking-wider bg-brand-gold px-3 py-1 rounded-full">Ujian Tengah Semester</span>
+                <h2 class="text-3xl font-bold text-brand-blue mt-3 flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-file-signature text-brand-gold"></i> Produk Praktik Mengajar Terbaik - Siklus 1
+                </h2>
+                <div class="w-20 h-1 bg-brand-gold mx-auto mt-2 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Modul Document -->
+                <div class="bg-white rounded-2xl shadow-lg border border-slate-200 p-6 flex flex-col justify-between">
+                    <div>
+                        <span class="px-3 py-1 bg-blue-100 text-brand-blue text-xs font-bold rounded-full uppercase">Modul Ajar Siklus 1</span>
+                        <h3 class="text-xl font-bold text-slate-800 my-3">Perangkat Pembelajaran Lengkap Siklus 1</h3>
+                        <p class="text-slate-600 text-sm mb-6">Dokumen perencanaan lengkap beserta RPP/Modul Ajar, Bahan Ajar, LKPD, dan Instrument Asesmen.</p>
+                    </div>
+                    <a href="#" class="w-full py-3 bg-brand-blue text-white font-bold rounded-lg text-center hover:bg-blue-900 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-file-pdf"></i> Buka / Unduh Modul Ajar
+                    </a>
+                </div>
+
+                <!-- Video Embed -->
+                <div class="bg-white rounded-2xl shadow-lg border border-slate-200 p-6 flex flex-col justify-between">
+                    <div>
+                        <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full uppercase">Video Pembelajaran</span>
+                        <h3 class="text-xl font-bold text-slate-800 my-3">Video Pelaksanaan Praktik Mengajar Siklus 1</h3>
+                        <div class="relative w-full rounded-xl overflow-hidden bg-black aspect-video mb-4">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Siklus 1" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-darkblue text-slate-400 py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 text-center text-xs space-y-2">
+            <p>© E-Portfolio Praktik Pengalaman Lapangan (PPL) Mandiri - Amilia Sholikh Hidayati, S.Pd.</p>
+        </div>
     </footer>
 
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
