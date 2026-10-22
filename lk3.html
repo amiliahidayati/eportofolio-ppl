@@ -1,71 +1,249 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LK 3 - Refleksi Praktik Mengajar</title>
-    <link rel="stylesheet" href="style.css">
+    <title>LK 3 Refleksi - E-Portfolio PPL Mandiri</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#1E3A8A',
+                            darkblue: '#0F172A',
+                            lightblue: '#3B82F6',
+                            gold: '#EAB308',
+                            goldhover: '#CA8A04',
+                            bglight: '#F8FAFC'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .blue-gradient {
+            background: linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-brand-bglight text-slate-800 font-sans leading-relaxed antialiased min-h-screen flex flex-col justify-between">
 
-    <nav>
-        <div class="logo">E-Portofolio PPL</div>
-        <ul>
-            <li><a href="index.html">Profil</a></li>
-            <li><a href="lk3.html" class="active">LK 3 Refleksi</a></li>
-            <li><a href="uts.html">UTS</a></li>
-            <li><a href="uas.html">UAS</a></li>
-        </ul>
-    </nav>
+    <!-- HEADER / NAVBAR -->
+    <header class="sticky top-0 z-50 bg-brand-blue text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo & Title -->
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-brand-gold flex items-center justify-center text-brand-darkblue font-extrabold text-xl shadow">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold tracking-tight block">E-Portfolio PPL</span>
+                        <span class="text-xs text-brand-gold font-medium tracking-wide uppercase block">Praktik Pengalaman Lapangan Mandiri</span>
+                    </div>
+                </a>
 
-    <div class="container">
-        <h1>LK 3: Refleksi Praktik Mengajar Terbimbing</h1>
-        <p>Berikut adalah analisis dan refleksi mendalam berdasarkan pelaksanaan Praktik Mengajar Mandiri.</p>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-1 lg:space-x-2 font-medium text-sm">
+                    <a href="index.html" class="px-3 py-2 rounded-md hover:bg-white/10 transition hover:text-brand-gold flex items-center gap-1.5"><i class="fa-solid fa-user text-xs"></i> Profil Guru</a>
+                    <a href="lk3.html" class="px-3 py-2 rounded-md bg-white/20 text-brand-gold flex items-center gap-1.5"><i class="fa-solid fa-book-open text-xs"></i> LK 3 Refleksi</a>
+                    <a href="uts.html" class="px-3 py-2 rounded-md hover:bg-white/10 transition hover:text-brand-gold flex items-center gap-1.5"><i class="fa-solid fa-file-signature text-xs"></i> UTS (Siklus 1)</a>
+                    <a href="uas.html" class="px-3 py-2 rounded-md hover:bg-white/10 transition hover:text-brand-gold flex items-center gap-1.5"><i class="fa-solid fa-award text-xs"></i> UAS (Siklus 2-4)</a>
+                </nav>
 
-        <!-- 1. Analisis Produk Perencanaan -->
-        <div class="card">
-            <h3>1. Analisis Produk Rancangan/Perencanaan Pembelajaran</h3>
-            <p><strong>Refleksi:</strong> Rancangan pembelajaran (Modul Ajar/RPP) yang saya susun telah mengintegrasikan model [sebutkan model, misal: Problem Based Learning]. Namun, pada implementasinya, alokasi waktu untuk sintaks "orientasi masalah" perlu ditambah karena siswa membutuhkan waktu lebih lama untuk memahami konteks. Ke depannya, saya akan menyederhanakan LKPD agar lebih efisien.</p>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2 rounded-md text-white hover:text-brand-gold hover:bg-white/10 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
         </div>
 
-        <!-- 2. Analisis Materi -->
-        <div class="card">
-            <h3>2. Analisis Materi Pembelajaran</h3>
-            <p><strong>Refleksi:</strong> Materi [sebutkan materi] yang disusun sudah sesuai dengan capaian pembelajaran. Namun, terdapat miskonsepsi pada sebagian siswa terkait [sebutkan konsep]. Saya menyadari perlunya menambahkan contoh kontekstual yang lebih dekat dengan kehidupan sehari-hari siswa di awal pembelajaran untuk meminimalisir miskonsepsi tersebut.</p>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-darkblue border-t border-blue-900 px-4 pt-2 pb-4 space-y-2">
+            <a href="index.html" class="mobile-link block px-3 py-2 rounded-md hover:bg-white/10 hover:text-brand-gold"><i class="fa-solid fa-user mr-2"></i>Profil Guru</a>
+            <a href="lk3.html" class="mobile-link block px-3 py-2 rounded-md text-brand-gold bg-white/10"><i class="fa-solid fa-book-open mr-2"></i>LK 3 Refleksi</a>
+            <a href="uts.html" class="mobile-link block px-3 py-2 rounded-md hover:bg-white/10 hover:text-brand-gold"><i class="fa-solid fa-file-signature mr-2"></i>UTS (Siklus 1)</a>
+            <a href="uas.html" class="mobile-link block px-3 py-2 rounded-md hover:bg-white/10 hover:text-brand-gold"><i class="fa-solid fa-award mr-2"></i>UAS (Siklus 2-4)</a>
         </div>
+    </header>
 
-        <!-- 3. Analisis Media -->
-        <div class="card">
-            <h3>3. Analisis Media Pembelajaran</h3>
-            <p><strong>Refleksi:</strong> Saya menggunakan media [sebutkan media, misal: Power Point dan Video]. Media video sangat membantu menarik perhatian, namun kualitas audio kurang jelas saat diputar di kelas. Untuk perbaikan, saya akan menyiapkan subtitle atau menggunakan pengeras suara tambahan. Penggunaan media interaktif (seperti Quizizz) terbukti meningkatkan partisipasi siswa.</p>
+    <main class="flex-grow py-12">
+        <section id="lk3" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold text-brand-gold uppercase tracking-wider bg-brand-blue px-3 py-1 rounded-full">Komponen Evaluasi Reflektif</span>
+                <h2 class="text-3xl font-bold text-brand-blue mt-3 flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-book-open text-brand-gold"></i> LK 3 Refleksi Praktik Mengajar Terbimbing & Mandiri
+                </h2>
+                <div class="w-20 h-1 bg-brand-gold mx-auto mt-2 rounded-full"></div>
+            </div>
+
+            <!-- EMBED DOKUMEN PDF LK 3 DARI GOOGLE DRIVE -->
+            <div class="max-w-5xl mx-auto mb-10 bg-white rounded-2xl p-6 shadow-md border border-slate-200">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4 pb-4 border-b border-slate-100">
+                    <div>
+                        <h3 class="text-lg font-bold text-brand-blue flex items-center gap-2">
+                            <i class="fa-solid fa-file-pdf text-red-500 text-xl"></i> Dokumen Lengkap LK 3 (Refleksi)
+                        </h3>
+                        <p class="text-slate-500 text-xs mt-1">Pratinjau langsung file PDF LK 3 yang telah diunggah ke Google Drive.</p>
+                    </div>
+                    <a href="https://docs.google.com/document/d/19Sc4qJnnVo1OR6uBY6zjdDdylUCwYRw1/edit?usp=drive_link&ouid=103862989376616121449&rtpof=true&sd=true" target="_blank" class="px-4 py-2 bg-brand-gold text-brand-darkblue text-xs font-bold rounded-lg hover:bg-brand-goldhover transition flex items-center gap-2">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Buka / Download PDF
+                    </a>
+                </div>
+                
+                <!-- Viewer Iframe Google Drive -->
+                <div class="relative w-full h-[550px] bg-slate-100 rounded-xl overflow-hidden border border-slate-200 shadow-inner">
+                    <iframe src="https://docs.google.com/document/d/19Sc4qJnnVo1OR6uBY6zjdDdylUCwYRw1/edit?usp=drive_link&ouid=103862989376616121449&rtpof=true&sd=true" class="w-full h-full border-0" allow="autoplay"></iframe>
+                </div>
+            </div>
+
+            <!-- ANALISIS PER POIN (ACCORDION) -->
+            <div class="space-y-4 max-w-5xl mx-auto">
+                
+                <!-- 1. Perencanaan Pembelajaran -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
+                    <button class="w-full p-5 text-left font-bold text-brand-blue flex justify-between items-center hover:bg-slate-50 transition" onclick="toggleAccordion(1)">
+                        <span class="flex items-center gap-3 text-lg">
+                            <span class="w-8 h-8 rounded-full bg-brand-blue text-brand-gold flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>
+                            Analisis Produk Rancangan / Perencanaan Pembelajaran
+                        </span>
+                        <i id="icon-1" class="fa-solid fa-chevron-down text-brand-gold transition-transform duration-300"></i>
+                    </button>
+                    <div id="acc-1" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-700 text-sm space-y-3 leading-relaxed">
+                        <p>Produk rancangan pembelajaran yang disusun meliputi Rencana Pembelajaran Mendalam (RPM), bahan ajar, media pembelajaran, Lembar Kerja Peserta Didik (LKPD), dan instrumen penilaian. Perangkat tersebut dirancang untuk membantu peserta didik memahami konsep <strong>struktur data tree</strong> serta menerapkan berpikir komputasional dalam menyelesaikan permasalahan kontekstual.</p>
+                        <p>Rancangan pembelajaran menggunakan model <strong>Problem Based Learning (PBL)</strong> dengan mengangkat permasalahan pembentukan kepanitiaan kegiatan <em>Class Meeting</em>. Permasalahan ini dipilih karena dekat dengan kehidupan peserta didik sehingga mereka dapat memahami konsep struktur data melalui situasi yang nyata. Peserta didik diarahkan untuk mengidentifikasi hubungan antaranggota kepanitiaan, menentukan posisi <em>root</em>, <em>parent</em>, <em>child</em>, dan <em>leaf</em>, serta menyusun diagram tree berdasarkan informasi yang tersedia.</p>
+                        <p>Secara umum, rancangan pembelajaran telah menghubungkan tujuan pembelajaran, kegiatan belajar, penggunaan LKPD, dan asesmen. Peserta didik tidak hanya menerima penjelasan konsep, tetapi juga berdiskusi, menganalisis masalah, menyusun diagram, dan merefleksikan hasil belajar. Hal ini mendukung pembelajaran yang berpusat pada peserta didik serta pengembangan kemampuan berpikir kritis, kolaborasi, dan pemecahan masalah.</p>
+                        <p>Aspek yang perlu diperhatikan dalam penyempurnaan rancangan adalah kesesuaian alokasi waktu dengan kompleksitas kegiatan, kejelasan petunjuk pengerjaan LKPD, serta pemberian bantuan bertahap bagi peserta didik yang mengalami kesulitan. Dengan demikian, rancangan pembelajaran dapat menjadi pedoman yang sistematis sekaligus fleksibel sesuai kebutuhan belajar peserta didik.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Materi Pembelajaran -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
+                    <button class="w-full p-5 text-left font-bold text-brand-blue flex justify-between items-center hover:bg-slate-50 transition" onclick="toggleAccordion(2)">
+                        <span class="flex items-center gap-3 text-lg">
+                            <span class="w-8 h-8 rounded-full bg-brand-blue text-brand-gold flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>
+                            Analisis Materi Pembelajaran yang Telah Disusun dan Diterapkan
+                        </span>
+                        <i id="icon-2" class="fa-solid fa-chevron-down text-brand-gold transition-transform duration-300"></i>
+                    </button>
+                    <div id="acc-2" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-700 text-sm space-y-3 leading-relaxed">
+                        <p>Materi pembelajaran yang disusun membahas konsep struktur data tree dan penerapan empat tahapan berpikir komputasional, yaitu <strong>dekomposisi, pengenalan pola, abstraksi, dan algoritma</strong>. Materi struktur data mencakup pengenalan hubungan hierarkis antarbagian serta istilah <em>root</em> sebagai simpul utama, <em>parent</em> sebagai simpul yang memiliki anak, <em>child</em> sebagai simpul turunan, dan <em>leaf</em> sebagai simpul yang tidak memiliki anak.</p>
+                        <p>Materi disajikan melalui contoh yang dekat dengan kehidupan sehari-hari, seperti struktur folder pada komputer dan susunan organisasi. Pada LKPD, konsep tersebut diterapkan melalui studi kasus pembentukan kepanitiaan <em>Class Meeting</em>, yang terdiri atas seorang ketua panitia, tiga koordinator, dan anggota pada setiap bagian. Peserta didik diminta menganalisis susunan tersebut, mengidentifikasi komponen tree, serta menggambarkan hubungan antarbagian dalam bentuk diagram.</p>
+                        <p>Penerapan materi ini memberikan kesempatan kepada peserta didik untuk menghubungkan pengetahuan konseptual dengan permasalahan nyata. Selain memahami struktur data, peserta didik dilatih menguraikan masalah menjadi bagian-bagian kecil, menemukan pola hubungan, memilih informasi yang relevan, dan menyusun langkah penyelesaian secara runtut.</p>
+                        <p>Materi ini memiliki tingkat kontekstualisasi yang baik karena tidak hanya berfokus pada teori informatika, tetapi juga mengembangkan kemampuan berpikir logis dan sistematis. Meskipun demikian, istilah <em>parent</em>, <em>child</em>, dan <em>leaf</em> berpotensi menimbulkan kebingungan karena satu simpul dapat menjadi <em>child</em> bagi simpul di atasnya sekaligus <em>parent</em> bagi simpul di bawahnya. Oleh karena itu, materi perlu disertai contoh visual secara bertahap, latihan identifikasi, dan pertanyaan pemantik untuk memastikan pemahaman peserta didik.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Media Pembelajaran -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
+                    <button class="w-full p-5 text-left font-bold text-brand-blue flex justify-between items-center hover:bg-slate-50 transition" onclick="toggleAccordion(3)">
+                        <span class="flex items-center gap-3 text-lg">
+                            <span class="w-8 h-8 rounded-full bg-brand-blue text-brand-gold flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>
+                            Analisis Media Pembelajaran yang Dipergunakan
+                        </span>
+                        <i id="icon-3" class="fa-solid fa-chevron-down text-brand-gold transition-transform duration-300"></i>
+                    </button>
+                    <div id="acc-3" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-700 text-sm space-y-3 leading-relaxed">
+                        <p>Media pembelajaran yang digunakan meliputi slide presentasi, ilustrasi struktur data tree, serta LKPD berwarna yang dilengkapi dengan studi kasus, tabel analisis, pertanyaan identifikasi, ruang menggambar diagram, refleksi diri, dan rubrik penilaian.</p>
+                        <p>Slide presentasi membantu guru menjelaskan konsep dan memberikan gambaran visual mengenai hubungan antarbagian dalam struktur tree. Sementara itu, LKPD menjadi media utama bagi peserta didik untuk menerapkan konsep melalui kegiatan kelompok. Desain LKPD yang menggunakan warna berbeda, ikon, dan pembagian bagian yang jelas dapat membantu peserta didik mengenali tahapan kegiatan serta memahami instruksi dengan lebih mudah.</p>
+                        <p>Keunggulan media ini adalah menggabungkan informasi visual dengan aktivitas analisis dan praktik. Peserta didik tidak hanya membaca materi, tetapi juga mengisi tabel berpikir komputasional, menjawab pertanyaan mengenai <em>root</em>, <em>parent</em>, <em>child</em>, dan <em>leaf</em>, serta menggambar diagram tree. Dengan demikian, LKPD dapat mendukung pembelajaran aktif, kolaboratif, dan kontekstual.</p>
+                        <p>Selain itu, LKPD memungkinkan guru mengamati proses berpikir peserta didik melalui jawaban dan diagram yang mereka hasilkan. Guru dapat mengidentifikasi bagian konsep yang telah dipahami maupun bagian yang masih memerlukan penjelasan tambahan.</p>
+                        <p>Adapun hal yang perlu ditingkatkan adalah memastikan ukuran tulisan dan ruang jawaban memadai, memberikan contoh diagram sebelum pengerjaan, serta menjelaskan instruksi LKPD secara lisan. Guru juga perlu memastikan bahwa desain yang menarik tetap mendukung keterbacaan dan tidak mengalihkan perhatian dari tujuan pembelajaran. Secara keseluruhan, media yang digunakan berpotensi membantu peserta didik memahami materi abstrak melalui representasi visual dan aktivitas yang terarah.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Video Pembelajaran -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
+                    <button class="w-full p-5 text-left font-bold text-brand-blue flex justify-between items-center hover:bg-slate-50 transition" onclick="toggleAccordion(4)">
+                        <span class="flex items-center gap-3 text-lg">
+                            <span class="w-8 h-8 rounded-full bg-brand-blue text-brand-gold flex items-center justify-center text-sm font-bold flex-shrink-0">4</span>
+                            Analisis Video Pelaksanaan Praktik Mengajar Mandiri
+                        </span>
+                        <i id="icon-4" class="fa-solid fa-chevron-down text-brand-gold transition-transform duration-300"></i>
+                    </button>
+                    <div id="acc-4" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-700 text-sm space-y-3 leading-relaxed">
+                        <p>Analisis video praktik mengajar mandiri dilakukan untuk mengevaluasi keterlaksanaan pembelajaran berdasarkan rancangan yang telah disusun. Aspek yang dapat dianalisis meliputi kegiatan pembukaan, penyampaian tujuan pembelajaran, pemberian apersepsi, penyajian materi, pengelolaan diskusi kelompok, pendampingan pengerjaan LKPD, presentasi hasil, asesmen, dan kegiatan penutup.</p>
+                        <p>Pada kegiatan pembukaan, hal yang perlu diperhatikan adalah kemampuan guru membangun kesiapan belajar dan menghubungkan pengetahuan awal peserta didik dengan materi struktur data tree. Penggunaan contoh struktur folder komputer atau organisasi dapat menjadi pengantar untuk menjelaskan konsep hubungan hierarkis. Penyampaian tujuan pembelajaran yang jelas membantu peserta didik memahami kompetensi yang diharapkan.</p>
+                        <p>Pada kegiatan inti, analisis difokuskan pada kejelasan penjelasan konsep, kesesuaian penerapan model PBL, dan kesempatan yang diberikan kepada peserta didik untuk aktif berdiskusi. Guru perlu memastikan bahwa peserta didik memperoleh kesempatan untuk mengidentifikasi masalah, mengisi LKPD, menentukan komponen tree, menggambar diagram, serta menjelaskan hasil analisisnya. Pendampingan guru juga perlu diperhatikan, terutama ketika peserta didik mengalami kesulitan membedakan <em>parent</em>, <em>child</em>, dan <em>leaf</em>.</p>
+                        <p>Pada kegiatan penutup, hal yang perlu dianalisis adalah kemampuan guru membimbing peserta didik menyimpulkan pembelajaran, melakukan refleksi, dan mengecek ketercapaian tujuan. Penilaian terhadap video juga perlu memperhatikan pengelolaan waktu, komunikasi guru, keterlibatan peserta didik, dan kesesuaian antara kegiatan yang terlihat dengan RPM.</p>
+                        <p>Melalui analisis video, guru dapat mengidentifikasi praktik yang sudah berjalan dengan baik dan bagian yang perlu diperbaiki. Hasil analisis dapat digunakan untuk meningkatkan kualitas penyampaian materi, pemerataan partisipasi peserta didik, pengelolaan kelas, dan efektivitas asesmen. Temuan akhir pada bagian ini perlu didasarkan pada rekaman video yang benar-benar dianalisis, misalnya melalui catatan waktu kejadian, contoh interaksi guru dan peserta didik, serta bukti kegiatan yang tampak dalam video.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Kegiatan Nonmengajar -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
+                    <button class="w-full p-5 text-left font-bold text-brand-blue flex justify-between items-center hover:bg-slate-50 transition" onclick="toggleAccordion(5)">
+                        <span class="flex items-center gap-3 text-lg">
+                            <span class="w-8 h-8 rounded-full bg-brand-blue text-brand-gold flex items-center justify-center text-sm font-bold flex-shrink-0">5</span>
+                            Analisis Kegiatan Nonmengajar
+                        </span>
+                        <i id="icon-5" class="fa-solid fa-chevron-down text-brand-gold transition-transform duration-300"></i>
+                    </button>
+                    <div id="acc-5" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-700 text-sm space-y-3 leading-relaxed">
+                        <p>Kegiatan nonmengajar merupakan kegiatan pendukung yang dilakukan selama pelaksanaan PPL untuk membantu kelancaran kegiatan pendidikan dan mendukung pengelolaan lingkungan sekolah. Kegiatan ini dapat mencakup penyusunan administrasi pembelajaran, penyiapan media dan perangkat ajar, pengelolaan dokumen pembelajaran, koordinasi dengan guru pamong, serta keterlibatan dalam kegiatan sekolah sesuai penugasan.</p>
+                        <p>Dalam konteks praktik di SMP Negeri 25 Malang, kegiatan pendukung perlu dikelola secara terencana agar dapat berjalan seimbang dengan tugas utama mengajar. Penyiapan RPM, bahan ajar, LKPD, dan instrumen penilaian, misalnya, membantu memastikan pembelajaran lebih terarah dan kebutuhan belajar peserta didik dapat diantisipasi. Koordinasi dengan guru pamong juga penting untuk memperoleh masukan dan menyesuaikan pelaksanaan pembelajaran dengan kondisi kelas.</p>
+                        <p>Kegiatan nonmengajar memberikan pengalaman mengenai tanggung jawab guru yang tidak hanya terbatas pada penyampaian materi di kelas. Guru juga perlu memiliki keterampilan administrasi, komunikasi profesional, kerja sama, manajemen waktu, dan kemampuan menyesuaikan diri dengan budaya sekolah.</p>
+                        <p>Melalui kegiatan tersebut, saya memperoleh pemahaman bahwa keberhasilan pembelajaran didukung oleh persiapan dan koordinasi yang baik. Ke depannya, saya perlu meningkatkan ketelitian dalam menyusun administrasi, mengatur prioritas kegiatan, serta melakukan dokumentasi secara teratur agar setiap kegiatan dapat dipertanggungjawabkan sebagai bagian dari pengembangan profesionalisme guru.</p>
+                        <p class="italic text-xs text-slate-500 bg-slate-100 p-3 rounded-lg border-l-2 border-slate-300">Catatan: Pada naskah akhir e-portofolio, bagian ini perlu dilengkapi dengan kegiatan nonmengajar yang benar-benar dilakukan, waktu pelaksanaan, peran yang dijalankan, dan bukti pendukung seperti dokumentasi atau hasil pekerjaan.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Instrumen Penilaian -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
+                    <button class="w-full p-5 text-left font-bold text-brand-blue flex justify-between items-center hover:bg-slate-50 transition" onclick="toggleAccordion(6)">
+                        <span class="flex items-center gap-3 text-lg">
+                            <span class="w-8 h-8 rounded-full bg-brand-blue text-brand-gold flex items-center justify-center text-sm font-bold flex-shrink-0">6</span>
+                            Analisis Instrumen Penilaian yang Dirancang Beserta Analisisnya
+                        </span>
+                        <i id="icon-6" class="fa-solid fa-chevron-down text-brand-gold transition-transform duration-300"></i>
+                    </button>
+                    <div id="acc-6" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-700 text-sm space-y-3 leading-relaxed">
+                        <p>Instrumen penilaian yang dirancang dalam pembelajaran struktur data tree meliputi penilaian terhadap pemahaman konsep, ketepatan jawaban, kerapian diagram, dan kerja sama kelompok. Aspek-aspek tersebut tercermin dalam rubrik penilaian yang terdapat pada LKPD.</p>
+                        <p>Penilaian pemahaman konsep digunakan untuk mengetahui kemampuan peserta didik dalam menjelaskan struktur data tree dan mengenali komponen-komponennya. Ketepatan jawaban digunakan untuk menilai kemampuan peserta didik menentukan <em>root</em>, <em>parent</em>, <em>child</em>, dan <em>leaf</em> berdasarkan studi kasus. Penilaian kerapian diagram memperhatikan keteraturan susunan, kejelasan hubungan antarbagian, dan keterbacaan diagram yang dibuat. Sementara itu, aspek kerja sama kelompok digunakan untuk mengamati partisipasi anggota, pembagian tugas, dan kontribusi dalam menyelesaikan LKPD.</p>
+                        <p>Instrumen tersebut memiliki kelebihan karena mencakup aspek pengetahuan, keterampilan, dan sikap dalam kegiatan pembelajaran. Penilaian tidak hanya berfokus pada hasil akhir berupa diagram, tetapi juga dapat memperhatikan proses kolaborasi dan penerapan konsep selama pengerjaan tugas. Dengan demikian, guru memperoleh gambaran yang lebih menyeluruh mengenai proses dan hasil belajar peserta didik.</p>
+                        <p>Meskipun demikian, instrumen penilaian perlu dilengkapi dengan kriteria dan deskripsi skor yang jelas agar penilaian lebih objektif dan konsisten. Misalnya, skor tertinggi diberikan ketika peserta didik mampu mengidentifikasi komponen tree secara tepat, menggambar diagram dengan hubungan yang benar, dan menunjukkan kontribusi aktif dalam kelompok. Skor yang lebih rendah diberikan sesuai tingkat ketepatan dan kelengkapan hasil kerja.</p>
+                        <p>Selain penilaian kelompok, asesmen individu perlu dilakukan untuk memastikan setiap peserta didik memahami materi secara mandiri. Asesmen tersebut dapat berupa pertanyaan singkat mengenai fungsi setiap komponen tree atau tugas mengidentifikasi komponen pada diagram baru. Hasil penilaian kemudian digunakan sebagai dasar pemberian umpan balik, pendampingan bagi peserta didik yang belum memahami konsep, dan kegiatan pengayaan bagi peserta didik yang telah mencapai tujuan pembelajaran.</p>
+                        <p>Secara keseluruhan, instrumen penilaian yang dirancang telah memberikan dasar untuk menilai pemahaman konsep, keterampilan menyusun diagram, dan kerja sama peserta didik. Penyempurnaan rubrik, penambahan asesmen individu, serta penggunaan hasil penilaian untuk menentukan tindak lanjut akan membantu meningkatkan kualitas asesmen dan memastikan pembelajaran berorientasi pada perkembangan kompetensi setiap peserta didik.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-darkblue text-slate-400 py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 text-center text-xs space-y-2">
+            <p>© E-Portfolio Praktik Pengalaman Lapangan (PPL) Mandiri - Amilia Sholikh Hidayati, S.Pd.</p>
         </div>
-
-        <!-- 4. Analisis Video -->
-        <div class="card">
-            <h3>4. Analisis Video Pelaksanaan Praktik Mengajar Mandiri</h3>
-            <p><strong>Refleksi:</strong> Berdasarkan tontonan ulang video, saya menyadari bahwa intonasi suara saya terkadang terlalu cepat saat menyampaikan instruksi. Selain itu, kontak mata dengan siswa di barisan belakang masih kurang. Perbaikan yang akan dilakukan adalah berlatih berbicara lebih perlahan dan melakukan mobilitas kelas (berjalan ke belakang) saat menjelaskan.</p>
-            <!-- Tempatkan video di sini jika ada -->
-            <!-- <div class="video-container"><iframe src="LINK_YOUTUBE" allowfullscreen></iframe></div> -->
-        </div>
-
-        <!-- 5. Analisis Nonmengajar -->
-        <div class="card">
-            <h3>5. Analisis Kegiatan Nonmengajar</h3>
-            <p><strong>Refleksi:</strong> Kegiatan nonmengajar seperti piket kelas dan administrasi sekolah memberikan pengalaman berharga dalam memahami manajemen sekolah secara keseluruhan. Saya belajar pentingnya koordinasi dengan staf TU dan wali kelas dalam mengelola data siswa. Kendala utama adalah penyesuaian jadwal, namun hal ini melatih kedisiplinan saya.</p>
-        </div>
-
-        <!-- 6. Instrumen Penilaian -->
-        <div class="card">
-            <h3>6. Instrumen Penilaian dan Analisisnya</h3>
-            <p><strong>Instrumen:</strong> Saya menggunakan tes tertulis (esai) dan penilaian sikap (observasi).</p>
-            <p><strong>Analisis:</strong> Dari hasil tes, 70% siswa mencapai KKTP. Soal esai pada indikator [sebutkan] masih sulit bagi siswa. Hal ini mengindikasikan bahwa pembelajaran pada indikator tersebut perlu menggunakan metode drill atau pendekatan yang lebih konkret. Untuk penilaian sikap, rubrik yang saya buat sudah cukup jelas, namun perlu penyesuaian untuk siswa yang sangat pasif.</p>
-        </div>
-
-    </div>
-
-    <footer>
-        &copy; 2026 [Nama Anda] - E-Portofolio PPL Mandiri
     </footer>
 
+    <script>
+        function toggleAccordion(id) {
+            const content = document.getElementById(`acc-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
