@@ -90,51 +90,23 @@
                 <div class="w-20 h-1 bg-brand-gold mx-auto mt-2 rounded-full"></div>
             </div>
 
-            <!-- KOMPONEN UPLOAD FILE LK 3 -->
+            <!-- EMBED DOKUMEN PDF LK 3 DARI GOOGLE DRIVE -->
             <div class="max-w-5xl mx-auto mb-10 bg-white rounded-2xl p-6 shadow-md border border-slate-200">
-                <div class="mb-6 pb-4 border-b border-slate-100">
-                    <h3 class="text-lg font-bold text-brand-blue flex items-center gap-2">
-                        <i class="fa-solid fa-file-arrow-up text-brand-gold text-xl"></i> Unggah Dokumen LK 3 (Refleksi)
-                    </h3>
-                    <p class="text-slate-500 text-xs mt-1">Unggah berkas dokumen refleksi LK 3 Anda dalam format PDF atau Word (.docx).</p>
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4 pb-4 border-b border-slate-100">
+                    <div>
+                        <h3 class="text-lg font-bold text-brand-blue flex items-center gap-2">
+                            <i class="fa-solid fa-file-pdf text-red-500 text-xl"></i> Dokumen Lengkap LK 3 (Refleksi)
+                        </h3>
+                        <p class="text-slate-500 text-xs mt-1">Pratinjau langsung file PDF LK 3 yang telah diunggah ke Google Drive.</p>
+                    </div>
+                    <a href="https://docs.google.com/document/d/19Sc4qJnnVo1OR6uBY6zjdDdylUCwYRw1/edit?usp=drive_link&ouid=103862989376616121449&rtpof=true&sd=true" target="_blank" class="px-4 py-2 bg-brand-gold text-brand-darkblue text-xs font-bold rounded-lg hover:bg-brand-goldhover transition flex items-center gap-2">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Buka / Download PDF
+                    </a>
                 </div>
-
-                <!-- Input Berkas Custom / Drop Zone -->
-                <div class="relative flex flex-col items-center justify-center w-full min-h-[220px] p-6 border-2 border-dashed border-slate-300 rounded-xl hover:border-brand-lightblue bg-slate-50 hover:bg-blue-50/50 transition cursor-pointer text-center group" id="drop-zone">
-                    <input type="file" id="file-upload" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" accept=".pdf,.doc,.docx" onchange="handleFileSelect(event)">
-                    
-                    <!-- tampilan sebelum file dipilih -->
-                    <div id="upload-prompt" class="flex flex-col items-center space-y-3">
-                        <div class="w-14 h-14 rounded-full bg-blue-100 text-brand-blue flex items-center justify-center text-2xl group-hover:scale-110 transition">
-                            <i class="fa-solid fa-cloud-arrow-up"></i>
-                        </div>
-                        <div>
-                            <p class="text-sm font-semibold text-slate-700">Klik untuk memilih berkas atau drag & drop di sini</p>
-                            <p class="text-xs text-slate-400 mt-1">Format yang didukung: PDF, DOC, DOCX (Maksimal 10MB)</p>
-                        </div>
-                        <span class="px-4 py-2 bg-brand-blue text-white text-xs font-bold rounded-lg hover:bg-blue-900 transition">
-                            Pilih Berkas
-                        </span>
-                    </div>
-
-                    <!-- tampilan setelah file dipilih -->
-                    <div id="file-info" class="hidden flex flex-col items-center space-y-3">
-                        <div class="w-14 h-14 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-2xl">
-                            <i class="fa-solid fa-file-lines"></i>
-                        </div>
-                        <div>
-                            <p id="file-name" class="text-sm font-bold text-slate-800">nama_file.pdf</p>
-                            <p id="file-size" class="text-xs text-slate-500 mt-0.5">0 KB</p>
-                        </div>
-                        <div class="flex items-center gap-2 pt-2">
-                            <span class="px-3 py-1.5 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-md flex items-center gap-1.5">
-                                <i class="fa-solid fa-circle-check"></i> Berkas Siap
-                            </span>
-                            <button type="button" onclick="removeFile(event)" class="px-3 py-1.5 bg-red-100 text-red-600 hover:bg-red-200 text-xs font-bold rounded-md transition flex items-center gap-1">
-                                <i class="fa-solid fa-trash"></i> Hapus
-                            </button>
-                        </div>
-                    </div>
+                
+                <!-- Viewer Iframe Google Drive -->
+                <div class="relative w-full h-[550px] bg-slate-100 rounded-xl overflow-hidden border border-slate-200 shadow-inner">
+                    <iframe src="https://docs.google.com/document/d/19Sc4qJnnVo1OR6uBY6zjdDdylUCwYRw1/edit?usp=drive_link&ouid=103862989376616121449&rtpof=true&sd=true" class="w-full h-full border-0" allow="autoplay"></iframe>
                 </div>
             </div>
 
@@ -272,32 +244,6 @@
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-
-        // Script Penanganan Upload Berkas
-        function handleFileSelect(event) {
-            const file = event.target.files[0];
-            if (file) {
-                document.getElementById('upload-prompt').classList.add('hidden');
-                document.getElementById('file-info').classList.remove('hidden');
-                document.getElementById('file-name').textContent = file.name;
-                
-                // Hitung ukuran file dalam KB / MB
-                let sizeText = '';
-                if (file.size < 1024 * 1024) {
-                    sizeText = (file.size / 1024).toFixed(1) + ' KB';
-                } else {
-                    sizeText = (file.size / (1024 * 1024)).toFixed(2) + ' MB';
-                }
-                document.getElementById('file-size').textContent = sizeText;
-            }
-        }
-
-        function removeFile(event) {
-            event.stopPropagation();
-            document.getElementById('file-upload').value = '';
-            document.getElementById('upload-prompt').classList.remove('hidden');
-            document.getElementById('file-info').classList.add('hidden');
-        }
     </script>
 </body>
 </html>
