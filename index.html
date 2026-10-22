@@ -119,7 +119,7 @@
                 <p class="text-slate-600 mt-2">Identitas Diri, Institusi, dan Visi Reflektif Pembelajaran</p>
             </div>
 
-            <div class="bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+            <div class="bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden grid grid-cols-1 lg:grid-cols-12 mb-12">
                 <!-- Photo & Basic Info -->
                 <div class="lg:col-span-4 blue-gradient p-8 text-white flex flex-col items-center justify-center text-center">
                     <div class="relative mb-6 w-48 sm:w-56 flex justify-center items-center">
@@ -168,6 +168,67 @@
                     </div>
                 </div>
             </div>
+
+            <!-- SLIDESHOW / CAROUSEL FOTO KEGIATAN PPL -->
+            <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-6 sm:p-8">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-brand-blue flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-images text-brand-gold"></i> Dokumentasi Kegiatan PPL Mandiri
+                    </h3>
+                    <p class="text-slate-500 text-sm mt-1">Potret aktivitas pembelajaran, pembiasaan, dan pendampingan di sekolah mitra</p>
+                </div>
+
+                <!-- Carousel Container -->
+                <div class="relative max-w-4xl mx-auto overflow-hidden rounded-xl shadow-lg bg-slate-900 group">
+                    <!-- Slides Wrapper -->
+                    <div id="carousel-slides" class="flex transition-transform duration-500 ease-in-out">
+                        
+                        <!-- Slide 1: Go Green -->
+                        <div class="w-full flex-shrink-0 relative">
+                            <img src="go green.jpeg" alt="Pembiasaan Go Green" class="w-full h-[350px] sm:h-[450px] object-cover">
+                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 text-white text-center">
+                                <h4 class="font-bold text-base text-brand-gold">Pembiasaan Go Green</h4>
+                                <p class="text-xs text-slate-200">Pendampingan murid merawat dan menjaga kebersihan lingkungan sekolah</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2: Upacara -->
+                        <div class="w-full flex-shrink-0 relative">
+                            <img src="upacara.jpg" alt="Pengondisian Upacara" class="w-full h-[350px] sm:h-[450px] object-cover">
+                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 text-white text-center">
+                                <h4 class="font-bold text-base text-brand-gold">Pengondisian Upacara / Apel Pagi</h4>
+                                <p class="text-xs text-slate-200">Membimbing kedisiplinan dan ketertiban peserta didik saat upacara</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3: Jurnalistik -->
+                        <div class="w-full flex-shrink-0 relative">
+                            <img src="jurnalistik.jpg" alt="Kokurikuler Jurnalistik" class="w-full h-[350px] sm:h-[450px] object-cover">
+                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 text-white text-center">
+                                <h4 class="font-bold text-base text-brand-gold">Pendampingan Kokurikuler Jurnalistik</h4>
+                                <p class="text-xs text-slate-200">Pelatihan wawancara dan penyusunan teks berita bersama peserta didik</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Navigation Arrows -->
+                    <button onclick="prevSlide()" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-brand-gold hover:text-brand-darkblue transition opacity-80 group-hover:opacity-100">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button onclick="nextSlide()" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-brand-gold hover:text-brand-darkblue transition opacity-80 group-hover:opacity-100">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                    <!-- Indicators (Dots) -->
+                    <div class="absolute bottom-16 inset-x-0 flex justify-center gap-2">
+                        <button onclick="currentSlide(0)" class="dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition" id="dot-0"></button>
+                        <button onclick="currentSlide(1)" class="dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition" id="dot-1"></button>
+                        <button onclick="currentSlide(2)" class="dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition" id="dot-2"></button>
+                    </div>
+                </div>
+            </div>
+
         </section>
     </main>
 
@@ -178,12 +239,59 @@
         </div>
     </footer>
 
+    <!-- JavaScript untuk Slideshow & Mobile Menu -->
     <script>
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+
+        // Script Carousel / Slideshow
+        let currentIndex = 0;
+        const slides = document.getElementById('carousel-slides');
+        const totalSlides = 3;
+
+        function updateSlide() {
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+            // Update dots
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.getElementById(`dot-${i}`);
+                if (i === currentIndex) {
+                    dot.classList.remove('bg-white/50');
+                    dot.classList.add('bg-brand-gold', 'w-6');
+                } else {
+                    dot.classList.add('bg-white/50');
+                    dot.classList.remove('bg-brand-gold', 'w-6');
+                }
+            }
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlide();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlide();
+        }
+
+        function currentSlide(index) {
+            currentIndex = index;
+            updateSlide();
+        }
+
+        // Auto-play slideshow setiap 4 detik
+        let slideInterval = setInterval(nextSlide, 4000);
+
+        // Pause auto-play saat kursor diarahkan ke slideshow
+        const carouselContainer = document.querySelector('.group');
+        carouselContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
+        carouselContainer.addEventListener('mouseleave', () => slideInterval = setInterval(nextSlide, 4000));
+
+        // Inisialisasi titik aktif awal
+        updateSlide();
     </script>
 </body>
 </html>
