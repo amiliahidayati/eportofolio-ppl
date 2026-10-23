@@ -90,23 +90,23 @@
                 <div class="w-20 h-1 bg-brand-gold mx-auto mt-2 rounded-full"></div>
             </div>
 
-            <!-- EMBED DOKUMEN PDF LK 3 DARI GOOGLE DRIVE -->
+            <!-- TAMPILAN FILE PDF LANGSUNG DI WEB -->
             <div class="max-w-5xl mx-auto mb-10 bg-white rounded-2xl p-6 shadow-md border border-slate-200">
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4 pb-4 border-b border-slate-100">
                     <div>
                         <h3 class="text-lg font-bold text-brand-blue flex items-center gap-2">
-                            <i class="fa-solid fa-file-pdf text-red-500 text-xl"></i> Dokumen Lengkap LK 3 (Refleksi)
+                            <i class="fa-solid fa-file-pdf text-red-500 text-xl"></i> Dokumen LK 3 (Refleksi)
                         </h3>
-                        <p class="text-slate-500 text-xs mt-1">Pratinjau langsung file PDF LK 3 yang telah diunggah ke Google Drive.</p>
+                        <p class="text-slate-500 text-xs mt-1">Pratinjau dokumen PDF LK 3 yang langsung termuat di halaman web.</p>
                     </div>
-                    <a href="https://drive.google.com/file/d/1IIJTt4PQ3yzv6xN0jqb29LgKWfUr8_xF/view?usp=drive_link" target="_blank" class="px-4 py-2 bg-brand-gold text-brand-darkblue text-xs font-bold rounded-lg hover:bg-brand-goldhover transition flex items-center gap-2">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Buka / Download PDF
+                    <a href="lk3.pdf" download class="px-4 py-2 bg-brand-blue text-white text-xs font-bold rounded-lg hover:bg-blue-900 transition flex items-center gap-2">
+                        <i class="fa-solid fa-download"></i> Download PDF
                     </a>
                 </div>
-                
-                <!-- Viewer Iframe Google Drive -->
-                <div class="relative w-full h-[550px] bg-slate-100 rounded-xl overflow-hidden border border-slate-200 shadow-inner">
-                    <iframe src="https://drive.google.com/file/d/1IIJTt4PQ3yzv6xN0jqb29LgKWfUr8_xF/view?usp=drive_link" class="w-full h-full border-0" allow="autoplay"></iframe>
+
+                <!-- Container Embed PDF -->
+                <div class="relative w-full h-[600px] bg-slate-100 rounded-xl overflow-hidden border border-slate-200 shadow-inner">
+                    <embed src="lk3.pdf" type="application/pdf" width="100%" height="100%">
                 </div>
             </div>
 
@@ -123,7 +123,7 @@
                         <i id="icon-1" class="fa-solid fa-chevron-down text-brand-gold transition-transform duration-300"></i>
                     </button>
                     <div id="acc-1" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-700 text-sm space-y-3 leading-relaxed">
-                        <p>Produk rancangan pembelajaran yang disusun meliputi Rencana Pembelajaran Mendalam (RPM), bahan ajar, media pembelajaran, Lembar Kerja Peserta Didik (LKPD), dan instrumen penilaian. Perangkat tersebut dirancang untuk membantu peserta didik memahami konsep <strong>struktur data tree</strong> serta menerapkan berpikir komputasional dalam menyelesaikan permasalahan kontekstual.</p>
+                        <p>Produk rancangan pembelajaran yang disusun meliputi Rencana Pembelajaran Mendalam (RPM), bahan ajar, media pembelajaran, Lembar Kerja Peserta Didik (LKPD), dan instrumen penilaian. Perangkat tersebut dirancang untuk membantu peserta didik memahami konsep <strong>struktur data tree</strong> serta menerapkan berpikir komputasional dalam menyelesaikan permasalahan kontekstual[cite: 2, 3, 4].</p>
                         <p>Rancangan pembelajaran menggunakan model <strong>Problem Based Learning (PBL)</strong> dengan mengangkat permasalahan pembentukan kepanitiaan kegiatan <em>Class Meeting</em>. Permasalahan ini dipilih karena dekat dengan kehidupan peserta didik sehingga mereka dapat memahami konsep struktur data melalui situasi yang nyata. Peserta didik diarahkan untuk mengidentifikasi hubungan antaranggota kepanitiaan, menentukan posisi <em>root</em>, <em>parent</em>, <em>child</em>, dan <em>leaf</em>, serta menyusun diagram tree berdasarkan informasi yang tersedia.</p>
                         <p>Secara umum, rancangan pembelajaran telah menghubungkan tujuan pembelajaran, kegiatan belajar, penggunaan LKPD, dan asesmen. Peserta didik tidak hanya menerima penjelasan konsep, tetapi juga berdiskusi, menganalisis masalah, menyusun diagram, dan merefleksikan hasil belajar. Hal ini mendukung pembelajaran yang berpusat pada peserta didik serta pengembangan kemampuan berpikir kritis, kolaborasi, dan pemecahan masalah.</p>
                         <p>Aspek yang perlu diperhatikan dalam penyempurnaan rancangan adalah kesesuaian alokasi waktu dengan kompleksitas kegiatan, kejelasan petunjuk pengerjaan LKPD, serta pemberian bantuan bertahap bagi peserta didik yang mengalami kesulitan. Dengan demikian, rancangan pembelajaran dapat menjadi pedoman yang sistematis sekaligus fleksibel sesuai kebutuhan belajar peserta didik.</p>
@@ -140,9 +140,9 @@
                         <i id="icon-2" class="fa-solid fa-chevron-down text-brand-gold transition-transform duration-300"></i>
                     </button>
                     <div id="acc-2" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-700 text-sm space-y-3 leading-relaxed">
-                        <p>Materi pembelajaran yang disusun membahas konsep struktur data tree dan penerapan empat tahapan berpikir komputasional, yaitu <strong>dekomposisi, pengenalan pola, abstraksi, dan algoritma</strong>. Materi struktur data mencakup pengenalan hubungan hierarkis antarbagian serta istilah <em>root</em> sebagai simpul utama, <em>parent</em> sebagai simpul yang memiliki anak, <em>child</em> sebagai simpul turunan, dan <em>leaf</em> sebagai simpul yang tidak memiliki anak.</p>
-                        <p>Materi disajikan melalui contoh yang dekat dengan kehidupan sehari-hari, seperti struktur folder pada komputer dan susunan organisasi. Pada LKPD, konsep tersebut diterapkan melalui studi kasus pembentukan kepanitiaan <em>Class Meeting</em>, yang terdiri atas seorang ketua panitia, tiga koordinator, dan anggota pada setiap bagian. Peserta didik diminta menganalisis susunan tersebut, mengidentifikasi komponen tree, serta menggambarkan hubungan antarbagian dalam bentuk diagram.</p>
-                        <p>Penerapan materi ini memberikan kesempatan kepada peserta didik untuk menghubungkan pengetahuan konseptual dengan permasalahan nyata. Selain memahami struktur data, peserta didik dilatih menguraikan masalah menjadi bagian-bagian kecil, menemukan pola hubungan, memilih informasi yang relevan, dan menyusun langkah penyelesaian secara runtut.</p>
+                        <p>Materi pembelajaran yang disusun membahas konsep struktur data tree dan penerapan empat tahapan berpikir komputasional, yaitu <strong>dekomposisi, pengenalan pola, abstraksi, dan algoritma</strong>[cite: 2, 3, 4]. Materi struktur data mencakup pengenalan hubungan hierarkis antarbagian serta istilah <em>root</em> sebagai simpul utama, <em>parent</em> sebagai simpul yang memiliki anak, <em>child</em> sebagai simpul turunan, dan <em>leaf</em> sebagai simpul yang tidak memiliki anak.</p>
+                        <p>Materi disajikan melalui contoh yang dekat dengan kehidupan sehari-hari, seperti struktur folder pada komputer dan susunan organisasi. Pada LKPD, konsep tersebut diterapkan melalui studi kasus pembentukan kepanitiaan <em>Class Meeting</em>, yang terdiri atas seorang ketua panitia, tiga koordinator, dan anggota pada setiap bagian. Peserta didik diminta menganalisis susunan tersebut, mengidentifikasi komponen tree, serta menggambarkan hubungan antarbagian dalam bentuk diagram[cite: 2, 3, 4].</p>
+                        <p>Penerapan materi ini memberikan kesempatan kepada peserta didik untuk menghubungkan pengetahuan konseptual dengan permasalahan nyata. Selain memahami struktur data, peserta didik dilatih menguraikan masalah menjadi bagian-bagian kecil, menemukan pola hubungan, memilih informasi yang relevan, dan menyusun langkah penyelesaian secara runtut[cite: 2, 3, 4].</p>
                         <p>Materi ini memiliki tingkat kontekstualisasi yang baik karena tidak hanya berfokus pada teori informatika, tetapi juga mengembangkan kemampuan berpikir logis dan sistematis. Meskipun demikian, istilah <em>parent</em>, <em>child</em>, dan <em>leaf</em> berpotensi menimbulkan kebingungan karena satu simpul dapat menjadi <em>child</em> bagi simpul di atasnya sekaligus <em>parent</em> bagi simpul di bawahnya. Oleh karena itu, materi perlu disertai contoh visual secara bertahap, latihan identifikasi, dan pertanyaan pemantik untuk memastikan pemahaman peserta didik.</p>
                     </div>
                 </div>
@@ -157,11 +157,11 @@
                         <i id="icon-3" class="fa-solid fa-chevron-down text-brand-gold transition-transform duration-300"></i>
                     </button>
                     <div id="acc-3" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-700 text-sm space-y-3 leading-relaxed">
-                        <p>Media pembelajaran yang digunakan meliputi slide presentasi, ilustrasi struktur data tree, serta LKPD berwarna yang dilengkapi dengan studi kasus, tabel analisis, pertanyaan identifikasi, ruang menggambar diagram, refleksi diri, dan rubrik penilaian.</p>
-                        <p>Slide presentasi membantu guru menjelaskan konsep dan memberikan gambaran visual mengenai hubungan antarbagian dalam struktur tree. Sementara itu, LKPD menjadi media utama bagi peserta didik untuk menerapkan konsep melalui kegiatan kelompok. Desain LKPD yang menggunakan warna berbeda, ikon, dan pembagian bagian yang jelas dapat membantu peserta didik mengenali tahapan kegiatan serta memahami instruksi dengan lebih mudah.</p>
-                        <p>Keunggulan media ini adalah menggabungkan informasi visual dengan aktivitas analisis dan praktik. Peserta didik tidak hanya membaca materi, tetapi juga mengisi tabel berpikir komputasional, menjawab pertanyaan mengenai <em>root</em>, <em>parent</em>, <em>child</em>, dan <em>leaf</em>, serta menggambar diagram tree. Dengan demikian, LKPD dapat mendukung pembelajaran aktif, kolaboratif, dan kontekstual.</p>
+                        <p>Media pembelajaran yang digunakan meliputi slide presentasi, ilustrasi struktur data tree, serta LKPD berwarna yang dilengkapi dengan studi kasus, tabel analisis, pertanyaan identifikasi, ruang menggambar diagram, refleksi diri, dan rubrik penilaian[cite: 2, 3, 4].</p>
+                        <p>Slide presentasi membantu guru menjelaskan konsep dan memberikan gambaran visual mengenai hubungan antarbagian dalam struktur tree. Sementara itu, LKPD menjadi media utama bagi peserta didik untuk menerapkan konsep melalui kegiatan kelompok. Desain LKPD yang menggunakan warna berbeda, ikon, dan pembagian bagian yang jelas dapat membantu peserta didik mengenali tahapan kegiatan serta memahami instruksi dengan lebih mudah[cite: 2, 3, 4].</p>
+                        <p>Keunggulan media ini adalah menggabungkan informasi visual dengan aktivitas analisis dan praktik. Peserta didik tidak hanya membaca materi, tetapi juga mengisi tabel berpikir komputasional, menjawab pertanyaan mengenai <em>root</em>, <em>parent</em>, <em>child</em>, dan <em>leaf</em>, serta menggambar diagram tree. Dengan demikian, LKPD dapat mendukung pembelajaran aktif, kolaboratif, dan kontekstual[cite: 2, 3, 4].</p>
                         <p>Selain itu, LKPD memungkinkan guru mengamati proses berpikir peserta didik melalui jawaban dan diagram yang mereka hasilkan. Guru dapat mengidentifikasi bagian konsep yang telah dipahami maupun bagian yang masih memerlukan penjelasan tambahan.</p>
-                        <p>Adapun hal yang perlu ditingkatkan adalah memastikan ukuran tulisan dan ruang jawaban memadai, memberikan contoh diagram sebelum pengerjaan, serta menjelaskan instruksi LKPD secara lisan. Guru juga perlu memastikan bahwa desain yang menarik tetap mendukung keterbacaan dan tidak mengalihkan perhatian dari tujuan pembelajaran. Secara keseluruhan, media yang digunakan berpotensi membantu peserta didik memahami materi abstrak melalui representasi visual dan aktivitas yang terarah.</p>
+                        <p>Adapun hal yang perlu ditingkatkan adalah memastikan ukuran tulisan dan ruang jawaban memadai, memberikan contoh diagram sebelum pengerjaan, serta menjelaskan instruksi LKPD secara lisan[cite: 2, 3, 4]. Guru juga perlu memastikan bahwa desain yang menarik tetap mendukung keterbacaan dan tidak mengalihkan perhatian dari tujuan pembelajaran. Secara keseluruhan, media yang digunakan berpotensi membantu peserta didik memahami materi abstrak melalui representasi visual dan aktivitas yang terarah.</p>
                     </div>
                 </div>
 
@@ -175,15 +175,15 @@
                         <i id="icon-4" class="fa-solid fa-chevron-down text-brand-gold transition-transform duration-300"></i>
                     </button>
                     <div id="acc-4" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-700 text-sm space-y-3 leading-relaxed">
-                        <p>Analisis video praktik mengajar mandiri dilakukan untuk mengevaluasi keterlaksanaan pembelajaran berdasarkan rancangan yang telah disusun. Aspek yang dapat dianalisis meliputi kegiatan pembukaan, penyampaian tujuan pembelajaran, pemberian apersepsi, penyajian materi, pengelolaan diskusi kelompok, pendampingan pengerjaan LKPD, presentasi hasil, asesmen, dan kegiatan penutup.</p>
+                        <p>Analisis video praktik mengajar mandiri dilakukan untuk mengevaluasi keterlaksanaan pembelajaran berdasarkan rancangan yang telah disusun. Aspek yang dapat dianalisis meliputi kegiatan pembukaan, penyampaian tujuan pembelajaran, pemberian apersepsi, penyajian materi, pengelolaan diskusi kelompok, pendampingan pengerjaan LKPD, presentasi hasil, asesmen, dan kegiatan penutup[cite: 2, 3, 4].</p>
                         <p>Pada kegiatan pembukaan, hal yang perlu diperhatikan adalah kemampuan guru membangun kesiapan belajar dan menghubungkan pengetahuan awal peserta didik dengan materi struktur data tree. Penggunaan contoh struktur folder komputer atau organisasi dapat menjadi pengantar untuk menjelaskan konsep hubungan hierarkis. Penyampaian tujuan pembelajaran yang jelas membantu peserta didik memahami kompetensi yang diharapkan.</p>
-                        <p>Pada kegiatan inti, analisis difokuskan pada kejelasan penjelasan konsep, kesesuaian penerapan model PBL, dan kesempatan yang diberikan kepada peserta didik untuk aktif berdiskusi. Guru perlu memastikan bahwa peserta didik memperoleh kesempatan untuk mengidentifikasi masalah, mengisi LKPD, menentukan komponen tree, menggambar diagram, serta menjelaskan hasil analisisnya. Pendampingan guru juga perlu diperhatikan, terutama ketika peserta didik mengalami kesulitan membedakan <em>parent</em>, <em>child</em>, dan <em>leaf</em>.</p>
+                        <p>Pada kegiatan inti, analisis difokuskan pada kejelasan penjelasan konsep, kesesuaian penerapan model PBL, dan kesempatan yang diberikan kepada peserta didik untuk aktif berdiskusi[cite: 2, 3, 4]. Guru perlu memastikan bahwa peserta didik memperoleh kesempatan untuk mengidentifikasi masalah, mengisi LKPD, menentukan komponen tree, menggambar diagram, serta menjelaskan hasil analisisnya. Pendampingan guru juga perlu diperhatikan, terutama ketika peserta didik mengalami kesulitan membedakan <em>parent</em>, <em>child</em>, dan <em>leaf</em>.</p>
                         <p>Pada kegiatan penutup, hal yang perlu dianalisis adalah kemampuan guru membimbing peserta didik menyimpulkan pembelajaran, melakukan refleksi, dan mengecek ketercapaian tujuan. Penilaian terhadap video juga perlu memperhatikan pengelolaan waktu, komunikasi guru, keterlibatan peserta didik, dan kesesuaian antara kegiatan yang terlihat dengan RPM.</p>
-                        <p>Melalui analisis video, guru dapat mengidentifikasi praktik yang sudah berjalan dengan baik dan bagian yang perlu diperbaiki. Hasil analisis dapat digunakan untuk meningkatkan kualitas penyampaian materi, pemerataan partisipasi peserta didik, pengelolaan kelas, dan efektivitas asesmen. Temuan akhir pada bagian ini perlu didasarkan pada rekaman video yang benar-benar dianalisis, misalnya melalui catatan waktu kejadian, contoh interaksi guru dan peserta didik, serta bukti kegiatan yang tampak dalam video.</p>
+                        <p>Melalui analisis video, guru dapat mengidentifikasi praktik yang sudah berjalan dengan baik dan bagian yang perlu diperbaiki[cite: 2, 3, 4]. Hasil analisis dapat digunakan untuk meningkatkan kualitas penyampaian materi, pemerataan partisipasi peserta didik, pengelolaan kelas, dan efektivitas asesmen. Temuan akhir pada bagian ini perlu didasarkan pada rekaman video yang benar-benar dianalisis, misalnya melalui catatan waktu kejadian, contoh interaksi guru dan peserta didik, serta bukti kegiatan yang tampak dalam video.</p>
                     </div>
                 </div>
 
-               <!-- 5. Kegiatan Nonmengajar -->
+                <!-- 5. Kegiatan Nonmengajar -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
                     <button class="w-full p-5 text-left font-bold text-brand-blue flex justify-between items-center hover:bg-slate-50 transition" onclick="toggleAccordion(5)">
                         <span class="flex items-center gap-3 text-lg">
@@ -203,16 +203,14 @@
                                 Pembiasaan Go Green
                             </h4>
                             
-                            <!-- Gambar di bawah judul -->
                             <div class="max-w-md mx-auto rounded-lg overflow-hidden border border-slate-200 shadow-inner bg-slate-100">
                                 <img src="go green.jpeg" alt="Pembiasaan Go Green" class="w-full h-56 object-cover hover:scale-105 transition duration-300">
                             </div>
-                            <p class="text-center text-xs text-slate-500 italic">Dokumentasi Pembiasaan Go Green</p>
+                            <p class="text-center text-xs text-slate-500 italic">Dokumentasi Pembiasaan Go Green[cite: 3]</p>
 
-                            <!-- Narasi kegiatan di bawah gambar -->
                             <div class="space-y-3 pt-2">
-                                <p>Kegiatan pada foto menunjukkan pendampingan murid dalam pembiasaan Go Green. Kegiatan tersebut dilaksanakan setiap hari sebelum pulang sekolah pada pukul 14.30–14.40. Guru mendampingi murid menjaga kebersihan dan kerapian lingkungan sekolah melalui kegiatan merawat area sekitar.</p>
-                                <p>Pendampingan tersebut membiasakan murid untuk peduli terhadap lingkungan dan bertanggung jawab terhadap ruang bersama. Guru juga memberikan contoh melalui keterlibatan langsung dalam kegiatan tersebut. Pembiasaan ini melatih murid untuk menjaga lingkungan secara rutin dan menerapkan sikap peduli dalam kehidupan sehari-hari.</p>
+                                <p>Kegiatan pada foto menunjukkan pendampingan murid dalam pembiasaan Go Green[cite: 3]. Kegiatan tersebut dilaksanakan setiap hari sebelum pulang sekolah pada pukul 14.30–14.40. Guru mendampingi murid menjaga kebersihan dan kerapian lingkungan sekolah melalui kegiatan merawat area sekitar.</p>
+                                <p>Pendampingan tersebut membiasakan murid untuk peduli terhadap lingkungan dan bertanggung jawab terhadap ruang bersama. Guru juga memberikan contoh melalui keterlibatan langsung dalam kegiatan tersebut[cite: 3]. Pembiasaan ini melatih murid untuk menjaga lingkungan secara rutin dan menerapkan sikap peduli dalam kehidupan sehari-hari.</p>
                             </div>
                         </div>
 
@@ -223,16 +221,14 @@
                                 Pengondisian Upacara Bendera / Apel Pagi
                             </h4>
                             
-                            <!-- Gambar di bawah judul -->
                             <div class="max-w-md mx-auto rounded-lg overflow-hidden border border-slate-200 shadow-inner bg-slate-100">
                                 <img src="upacara.jpg" alt="Pengondisian Upacara Bendera" class="w-full h-56 object-cover hover:scale-105 transition duration-300">
                             </div>
-                            <p class="text-center text-xs text-slate-500 italic">Dokumentasi Pengondisian Upacara Bendera / Apel Pagi</p>
+                            <p class="text-center text-xs text-slate-500 italic">Dokumentasi Pengondisian Upacara Bendera / Apel Pagi[cite: 4]</p>
 
-                            <!-- Narasi kegiatan di bawah gambar -->
                             <div class="space-y-3 pt-2">
-                                <p>Kegiatan pada foto menunjukkan keterlibatan dalam mengondisikan murid saat upacara bendera atau apel pagi. Kegiatan tersebut dilaksanakan secara rutin setiap hari Senin pada pukul 07.00–08.00. Guru membantu murid mengikuti kegiatan dengan tertib dan menjaga barisan selama kegiatan berlangsung.</p>
-                                <p>Guru juga mengingatkan murid untuk memperhatikan arahan dan mengikuti rangkaian kegiatan sesuai ketentuan. Pembiasaan tersebut melatih murid untuk disiplin dan mematuhi aturan dalam kegiatan sekolah. Murid juga belajar menjaga ketertiban dan bertanggung jawab terhadap perannya selama kegiatan berlangsung. Dalam pelaksanaannya, guru memberikan contoh melalui sikap disiplin dan kesiapan mengikuti kegiatan. Keterlibatan tersebut mendukung terciptanya budaya sekolah yang tertib melalui pembiasaan yang dilakukan secara rutin.</p>
+                                <p>Kegiatan pada foto menunjukkan keterlibatan dalam mengondisikan murid saat upacara bendera atau apel pagi[cite: 4]. Kegiatan tersebut dilaksanakan secara rutin setiap hari Senin pada pukul 07.00–08.00. Guru membantu murid mengikuti kegiatan dengan tertib dan menjaga barisan selama kegiatan berlangsung.</p>
+                                <p>Guru juga mengingatkan murid untuk memperhatikan arahan dan mengikuti rangkaian kegiatan sesuai ketentuan[cite: 4]. Pembiasaan tersebut melatih murid untuk disiplin dan mematuhi aturan dalam kegiatan sekolah. Murid juga belajar menjaga ketertiban dan bertanggung jawab terhadap perannya selama kegiatan berlangsung. Dalam pelaksanaannya, guru memberikan contoh melalui sikap disiplin dan kesiapan mengikuti kegiatan. Keterlibatan tersebut mendukung terciptanya budaya sekolah yang tertib melalui pembiasaan yang dilakukan secara rutin.</p>
                             </div>
                         </div>
 
@@ -243,16 +239,14 @@
                                 Pendampingan Kegiatan Kokurikuler Jurnalistik
                             </h4>
                             
-                            <!-- Gambar di bawah judul -->
                             <div class="max-w-md mx-auto rounded-lg overflow-hidden border border-slate-200 shadow-inner bg-slate-100">
                                 <img src="jurnalistik.jpg" alt="Pendampingan Kokurikuler Jurnalistik" class="w-full h-56 object-cover hover:scale-105 transition duration-300">
                             </div>
-                            <p class="text-center text-xs text-slate-500 italic">Dokumentasi Pendampingan Kegiatan Kokurikuler Jurnalistik</p>
+                            <p class="text-center text-xs text-slate-500 italic">Dokumentasi Pendampingan Kegiatan Kokurikuler Jurnalistik[cite: 2]</p>
 
-                            <!-- Narasi kegiatan di bawah gambar -->
                             <div class="space-y-3 pt-2">
-                                <p>Kegiatan pada foto menunjukkan pendampingan murid dalam kegiatan kokurikuler melalui tugas berlatih menjadi jurnalis. Kegiatan tersebut menghasilkan teks berita berdasarkan hasil wawancara dengan warga. Murid menjalankan kegiatan secara bertahap, mulai dari menyusun teks wawancara hingga melakukan wawancara dengan narasumber. Setelah itu, murid mengolah informasi yang diperoleh menjadi sebuah teks berita.</p>
-                                <p>Guru mendampingi setiap tahap agar murid dapat menjalankan tugas secara terarah dan berani berinteraksi dengan narasumber. Kegiatan ini melatih murid untuk berkomunikasi, menggali informasi, dan menyampaikan hasil wawancara secara sistematis. Pengalaman tersebut juga membantu murid mengembangkan kemampuan bekerja sama dan berpikir kritis.</p>
+                                <p>Kegiatan pada foto menunjukkan pendampingan murid dalam kegiatan kokurikuler melalui tugas berlatih menjadi jurnalis[cite: 2]. Kegiatan tersebut menghasilkan teks berita berdasarkan hasil wawancara dengan warga. Murid menjalankan kegiatan secara bertahap, mulai dari menyusun teks wawancara hingga melakukan wawancara dengan narasumber. Setelah itu, murid mengolah informasi yang diperoleh menjadi sebuah teks berita.</p>
+                                <p>Guru mendampingi setiap tahap agar murid dapat menjalankan tugas secara terarah dan berani berinteraksi dengan narasumber[cite: 2]. Kegiatan ini melatih murid untuk berkomunikasi, menggali informasi, dan menyampaikan hasil wawancara secara sistematis. Pengalaman tersebut juga membantu murid mengembangkan kemampuan bekerja sama dan berpikir kritis.</p>
                             </div>
                         </div>
 
@@ -269,12 +263,12 @@
                         <i id="icon-6" class="fa-solid fa-chevron-down text-brand-gold transition-transform duration-300"></i>
                     </button>
                     <div id="acc-6" class="hidden p-6 bg-slate-50 border-t border-slate-100 text-slate-700 text-sm space-y-3 leading-relaxed">
-                        <p>Instrumen penilaian yang dirancang dalam pembelajaran struktur data tree meliputi penilaian terhadap pemahaman konsep, ketepatan jawaban, kerapian diagram, dan kerja sama kelompok. Aspek-aspek tersebut tercermin dalam rubrik penilaian yang terdapat pada LKPD.</p>
-                        <p>Penilaian pemahaman konsep digunakan untuk mengetahui kemampuan peserta didik dalam menjelaskan struktur data tree dan mengenali komponen-komponennya. Ketepatan jawaban digunakan untuk menilai kemampuan peserta didik menentukan <em>root</em>, <em>parent</em>, <em>child</em>, dan <em>leaf</em> berdasarkan studi kasus. Penilaian kerapian diagram memperhatikan keteraturan susunan, kejelasan hubungan antarbagian, dan keterbacaan diagram yang dibuat. Sementara itu, aspek kerja sama kelompok digunakan untuk mengamati partisipasi anggota, pembagian tugas, dan kontribusi dalam menyelesaikan LKPD.</p>
-                        <p>Instrumen tersebut memiliki kelebihan karena mencakup aspek pengetahuan, keterampilan, dan sikap dalam kegiatan pembelajaran. Penilaian tidak hanya berfokus pada hasil akhir berupa diagram, tetapi juga dapat memperhatikan proses kolaborasi dan penerapan konsep selama pengerjaan tugas. Dengan demikian, guru memperoleh gambaran yang lebih menyeluruh mengenai proses dan hasil belajar peserta didik.</p>
-                        <p>Meskipun demikian, instrumen penilaian perlu dilengkapi dengan kriteria dan deskripsi skor yang jelas agar penilaian lebih objektif dan konsisten. Misalnya, skor tertinggi diberikan ketika peserta didik mampu mengidentifikasi komponen tree secara tepat, menggambar diagram dengan hubungan yang benar, dan menunjukkan kontribusi aktif dalam kelompok. Skor yang lebih rendah diberikan sesuai tingkat ketepatan dan kelengkapan hasil kerja.</p>
-                        <p>Selain penilaian kelompok, asesmen individu perlu dilakukan untuk memastikan setiap peserta didik memahami materi secara mandiri. Asesmen tersebut dapat berupa pertanyaan singkat mengenai fungsi setiap komponen tree atau tugas mengidentifikasi komponen pada diagram baru. Hasil penilaian kemudian digunakan sebagai dasar pemberian umpan balik, pendampingan bagi peserta didik yang belum memahami konsep, dan kegiatan pengayaan bagi peserta didik yang telah mencapai tujuan pembelajaran.</p>
-                        <p>Secara keseluruhan, instrumen penilaian yang dirancang telah memberikan dasar untuk menilai pemahaman konsep, keterampilan menyusun diagram, dan kerja sama peserta didik. Penyempurnaan rubrik, penambahan asesmen individu, serta penggunaan hasil penilaian untuk menentukan tindak lanjut akan membantu meningkatkan kualitas asesmen dan memastikan pembelajaran berorientasi pada perkembangan kompetensi setiap peserta didik.</p>
+                        <p>Instrumen penilaian yang dirancang dalam pembelajaran struktur data tree meliputi penilaian terhadap pemahaman konsep, ketepatan jawaban, kerapian diagram, dan kerja sama kelompok[cite: 2, 3, 4]. Aspek-aspek tersebut tercermin dalam rubrik penilaian yang terdapat pada LKPD.</p>
+                        <p>Penilaian pemahaman konsep digunakan untuk mengetahui kemampuan peserta didik dalam menjelaskan struktur data tree dan mengenali komponen-komponennya[cite: 2, 3, 4]. Ketepatan jawaban digunakan untuk menilai kemampuan peserta didik menentukan <em>root</em>, <em>parent</em>, <em>child</em>, dan <em>leaf</em> berdasarkan studi kasus. Penilaian kerapian diagram memperhatikan keteraturan susunan, kejelasan hubungan antarbagian, dan keterbacaan diagram yang dibuat. Sementara itu, aspek kerja sama kelompok digunakan untuk mengamati partisipasi anggota, pembagian tugas, dan kontribusi dalam menyelesaikan LKPD.</p>
+                        <p>Instrumen tersebut memiliki kelebihan karena mencakup aspek pengetahuan, keterampilan, dan sikap dalam kegiatan pembelajaran[cite: 2, 3, 4]. Penilaian tidak hanya berfokus pada hasil akhir berupa diagram, tetapi juga dapat memperhatikan proses kolaborasi dan penerapan konsep selama pengerjaan tugas. Dengan demikian, guru memperoleh gambaran yang lebih menyeluruh mengenai proses dan hasil belajar peserta didik.</p>
+                        <p>Meskipun demikian, instrumen penilaian perlu dilengkapi dengan kriteria dan deskripsi skor yang jelas agar penilaian lebih objektif dan konsisten. Misalnya, skor tertinggi diberikan ketika peserta didik mampu mengidentifikasi komponen tree secara tepat, menggambar diagram dengan hubungan yang benar, dan menunjukkan kontribusi aktif dalam kelompok[cite: 2, 3, 4]. Skor yang lebih rendah diberikan sesuai tingkat ketepatan dan kelengkapan hasil kerja.</p>
+                        <p>Selain penilaian kelompok, asesmen individu perlu dilakukan untuk memastikan setiap peserta didik memahami materi secara mandiri[cite: 2, 3, 4]. Asesmen tersebut dapat berupa pertanyaan singkat mengenai fungsi setiap komponen tree atau tugas mengidentifikasi komponen pada diagram baru. Hasil penilaian kemudian digunakan sebagai dasar pemberian umpan balik, pendampingan bagi peserta didik yang belum memahami konsep, dan kegiatan pengayaan bagi peserta didik yang telah mencapai tujuan pembelajaran.</p>
+                        <p>Secara keseluruhan, instrumen penilaian yang dirancang telah memberikan dasar untuk menilai pemahaman konsep, keterampilan menyusun diagram, dan kerja sama peserta didik[cite: 2, 3, 4]. Penyempurnaan rubrik, penambahan asesmen individu, serta penggunaan hasil penilaian untuk menentukan tindak lanjut akan membantu meningkatkan kualitas asesmen dan memastikan pembelajaran berorientasi pada perkembangan kompetensi setiap peserta didik.</p>
                     </div>
                 </div>
 
@@ -289,6 +283,7 @@
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script>
         function toggleAccordion(id) {
             const content = document.getElementById(`acc-${id}`);
