@@ -105,7 +105,7 @@
                     Siklus 3
                 </button>
                 <button onclick="switchSiklus(4)" id="btn-siklus-4" class="px-6 py-3 rounded-xl font-bold text-sm transition shadow-md bg-white text-slate-700 border border-slate-300 hover:bg-slate-100">
-                    Siklus 4
+                    Siklus 4 (Puncak)
                 </button>
             </div>
 
@@ -123,57 +123,43 @@
                             <i class="fa-solid fa-file-pdf text-red-500"></i> 1. Analisis & Dokumen Modul Ajar (Siklus 2)
                         </h4>
                         <p class="text-slate-700 text-sm text-justify-custom">
-                            <strong>Konteks & Tujuan:</strong>RPM materi Analisis Data: Fungsi IF, VLOOKUP, dan HLOOKUP disusun untuk mata pelajaran Informatika kelas IX semester ganjil di SMPN 25 Malang dengan alokasi waktu 3 JP atau 120 menit. Pembelajaran ini berfokus pada kemampuan peserta didik dalam memahami dan menerapkan fungsi pengolah angka menggunakan Microsoft Excel atau Google Spreadsheet. Konteks pembelajaran diangkat dari permasalahan pencatatan penjualan koperasi sekolah secara manual yang berpotensi menimbulkan kesalahan. Melalui permasalahan tersebut, peserta didik diarahkan untuk memahami manfaat penggunaan spreadsheet dalam mengolah data secara lebih cepat, tepat, dan terstruktur. Pembelajaran menggunakan model Project Based Learning (PjBL) dengan pendekatan kontekstual dan berpusat pada peserta didik. Kegiatan dilaksanakan melalui diskusi kelompok, praktik, pengerjaan proyek mini, presentasi, dan refleksi. Pelaksanaan pembelajaran didukung oleh perangkat komputer atau laptop, aplikasi spreadsheet, serta LKPD proyek sebagai panduan kegiatan peserta didik.
-                            Tujuan pembelajaran dalam RPM ini adalah agar peserta didik mampu menjelaskan fungsi dan sintaks rumus IF, VLOOKUP, dan HLOOKUP, serta menerapkannya dalam pengolahan data menggunakan aplikasi spreadsheet. Peserta didik diharapkan mampu menggunakan fungsi IF untuk menentukan kondisi atau kategori berdasarkan data, VLOOKUP untuk mencari data pada tabel referensi vertikal, dan HLOOKUP untuk mencari data pada tabel referensi horizontal. Selain itu, peserta didik diharapkan mampu mengintegrasikan ketiga rumus tersebut dalam proyek mini berupa rekap penjualan koperasi sekolah. Melalui kegiatan proyek, peserta didik juga dilatih untuk bekerja sama, membagi tugas, menyelesaikan permasalahan, dan mempresentasikan hasil pekerjaan secara logis serta percaya diri. Dengan demikian, tujuan pembelajaran tidak hanya berorientasi pada pemahaman konsep dan keterampilan menggunakan rumus, tetapi juga pada pengembangan kemampuan berpikir kritis, kolaborasi, komunikasi, dan pemecahan masalah.
-                       </p>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs bg-white p-4 rounded-xl border border-slate-200">
-                            <div><strong class="text-brand-blue">Kelebihan:</strong> Kontekstual dan relevan: Materi dikaitkan dengan permasalahan pencatatan penjualan koperasi sekolah sehingga peserta didik dapat memahami penerapan rumus dalam kehidupan sehari-hari.
-
-
-
-Berpusat pada peserta didik: Kegiatan diskusi, praktik, dan proyek memberikan kesempatan kepada peserta didik untuk terlibat aktif dalam pembelajaran.
-
-
-
-Mengembangkan keterampilan digital: Peserta didik memperoleh pengalaman menggunakan Microsoft Excel atau Google Spreadsheet untuk mengolah data.
-
-
-
-Mendorong kolaborasi: Pembagian tugas dalam kelompok melatih kerja sama, tanggung jawab, dan kemampuan berkomunikasi.
-
-
-
-Menggunakan asesmen yang beragam: RPM mencakup asesmen awal, asesmen proses, dan asesmen akhir untuk mengetahui kesiapan, perkembangan, serta hasil belajar peserta didik.
-
-
-
-Memuat kegiatan refleksi: Peserta didik diajak mengevaluasi kesulitan dan memahami manfaat materi yang telah dipelajari..</div>
-                            <div><strong class="text-brand-blue">Kekurangan:</strong> Alokasi waktu cukup padat: Pembelajaran tiga rumus sekaligus hingga tahap pengerjaan proyek dan presentasi dalam satu pertemuan berpotensi menyulitkan peserta didik yang membutuhkan waktu belajar lebih lama.
-
-
-
-Tingkat kesulitan materi cukup tinggi: Peserta didik perlu memahami perbedaan fungsi IF, VLOOKUP, dan HLOOKUP serta mengintegrasikannya dalam satu proyek.
-
-
-
-Asesmen belum terperinci sepenuhnya: Instrumen observasi, soal uraian, dan pedoman penskoran belum dicantumkan secara lengkap dalam dokumen.
-
-
-
-Penilaian individu belum terlihat secara jelas: Penilaian hasil proyek kelompok belum sepenuhnya menunjukkan tingkat pemahaman setiap peserta didik.
-
-
-
-Pendampingan perlu disesuaikan: Peserta didik yang belum menguasai dasar penggunaan spreadsheet mungkin memerlukan contoh tambahan dan bimbingan bertahap.
-
-
-
-Tujuan pembelajaran perlu diperjelas: Tujuan menyelesaikan proyek pada tingkat C6 perlu didukung kesempatan bagi peserta didik untuk merancang solusi secara mandiri, sedangkan tujuan presentasi perlu menekankan kemampuan menjelaskan hasil dan alasan pemilihan rumus.</div>
+                            <strong>Konteks & Tujuan:</strong> RPM materi Analisis Data: Fungsi IF, VLOOKUP, dan HLOOKUP disusun untuk mata pelajaran Informatika kelas IX semester ganjil di SMPN 25 Malang dengan alokasi waktu 3 JP (120 menit). Pembelajaran berfokus pada penerapan fungsi pengolah angka menggunakan Microsoft Excel atau Google Spreadsheet. Konteks diangkat dari permasalahan pencatatan penjualan koperasi sekolah secara manual. Pembelajaran menggunakan model <em>Project Based Learning</em> (PjBL) dengan pendekatan kontekstual. Tujuan pembelajarannya agar peserta didik mampu menjelaskan sintaks rumus IF, VLOOKUP, HLOOKUP, serta mengintegrasikannya dalam proyek rekap penjualan koperasi sekolah secara kolaboratif.
+                        </p>
+                        
+                        <!-- Kelebihan & Kekurangan dalam Bentuk Point -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs bg-white p-5 rounded-xl border border-slate-200">
+                            <div>
+                                <strong class="text-brand-blue text-sm block mb-2"><i class="fa-solid fa-circle-check text-green-600 mr-1"></i> Kelebihan:</strong>
+                                <ul class="list-disc pl-4 space-y-1.5 text-slate-700">
+                                    <li>Kontekstual dan relevan dengan permasalahan pencatatan penjualan koperasi sekolah.</li>
+                                    <li>Berpusat pada peserta didik melalui aktivitas diskusi, praktik, dan proyek mini.</li>
+                                    <li>Mengembangkan keterampilan digital dalam mengolah data menggunakan spreadsheet.</li>
+                                    <li>Mendorong kolaborasi, kerja sama, dan komunikasi antar anggota kelompok.</li>
+                                    <li>Memuat asesmen yang beragam (diagnostik, proses, hingga sumatif).</li>
+                                    <li>Dilengkapi sesi refleksi untuk mengevaluasi kesulitan belajar siswa.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <strong class="text-brand-blue text-sm block mb-2"><i class="fa-solid fa-circle-exclamation text-amber-600 mr-1"></i> Kekurangan:</strong>
+                                <ul class="list-disc pl-4 space-y-1.5 text-slate-700">
+                                    <li>Alokasi waktu cukup padat karena membahas tiga rumus sekaligus dalam satu pertemuan.</li>
+                                    <li>Tingkat kesulitan materi cukup tinggi bagi sebagian siswa pemula.</li>
+                                    <li>Instrumen observasi dan rubrik penskoran belum dicantumkan secara lengkap.</li>
+                                    <li>Penilaian individu belum sepenuhnya tergambar dari hasil proyek kelompok.</li>
+                                    <li>Memerlukan pendampingan bertahap bagi siswa yang belum lancar dasar spreadsheet.</li>
+                                </ul>
+                            </div>
                         </div>
+
+                        <!-- Pratinjau PDF Lokal -->
                         <div class="space-y-2">
-                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Pratinjau PDF Modul Ajar Siklus 2:</span>
-                            <div class="relative w-full h-[450px] bg-slate-200 rounded-xl overflow-hidden border border-slate-300">
-                                <iframe src="https://drive.google.com/file/d/1GL87uMKJzdijrv3ieTzdFLthDcePvhmB/view?usp=drive_link" class="w-full h-full border-0"></iframe>
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Pratinjau Dokumen Modul Ajar Siklus 2:</span>
+                            <div class="relative w-full h-[500px] bg-slate-200 rounded-xl overflow-hidden border border-slate-300">
+                                <!-- Ganti 'modul-siklus2.pdf' dengan nama file PDF asli Anda di folder lokal -->
+                                <iframe src="modul-siklus2.pdf" class="w-full h-full border-0"></iframe>
+                            </div>
+                            <div class="text-right">
+                                <a href="modul-siklus2.pdf" target="_blank" class="text-xs text-brand-blue hover:underline font-semibold"><i class="fa-solid fa-download mr-1"></i> Download / Buka File PDF di Tab Baru</a>
                             </div>
                         </div>
                     </div>
@@ -184,16 +170,30 @@ Tujuan pembelajaran perlu diperjelas: Tujuan menyelesaikan proyek pada tingkat C
                             <i class="fa-solid fa-laptop-code text-brand-gold"></i> 2. Analisis & Dokumen Media Ajar (Siklus 2)
                         </h4>
                         <p class="text-slate-700 text-sm text-justify-custom">
-                            <strong>Konteks & Tujuan:</strong> Menggunakan media visual berbasis Canva Interaktif dan infografis untuk memperjelas alur materi esensial.
+                            <strong>Konteks & Tujuan:</strong> Menggunakan media visual berbasis Canva Interaktif dan infografis untuk memperjelas alur materi esensial serta merangsang respon kognitif siswa melalui kuis gamifikasi.
                         </p>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs bg-white p-4 rounded-xl border border-slate-200">
-                            <div><strong class="text-brand-blue">Kelebihan:</strong> Tampilan visual menarik dan kontras tinggi.</div>
-                            <div><strong class="text-brand-blue">Kekurangan:</strong> Bergantung penuh pada jaringan internet.</div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs bg-white p-5 rounded-xl border border-slate-200">
+                            <div>
+                                <strong class="text-brand-blue text-sm block mb-2"><i class="fa-solid fa-circle-check text-green-600 mr-1"></i> Kelebihan:</strong>
+                                <ul class="list-disc pl-4 space-y-1.5 text-slate-700">
+                                    <li>Tampilan visual sangat menarik, interaktif, dan memiliki kontras warna yang baik.</li>
+                                    <li>Mampu memicu antusiasme dan fokus visual peserta didik selama penjelasan materi.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <strong class="text-brand-blue text-sm block mb-2"><i class="fa-solid fa-circle-exclamation text-amber-600 mr-1"></i> Kekurangan:</strong>
+                                <ul class="list-disc pl-4 space-y-1.5 text-slate-700">
+                                    <li>Sangat bergantung pada ketersediaan proyektor dan kestabilan jaringan internet sekolah.</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="space-y-2">
-                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Pratinjau PDF Media Ajar Siklus 2:</span>
-                            <div class="relative w-full h-[450px] bg-slate-200 rounded-xl overflow-hidden border border-slate-300">
-                                <iframe src="https://drive.google.com/file/d/ID_MEDIA_SIKLUS_2/preview" class="w-full h-full border-0"></iframe>
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Pratinjau Dokumen Media Ajar Siklus 2:</span>
+                            <div class="relative w-full h-[500px] bg-slate-200 rounded-xl overflow-hidden border border-slate-300">
+                                <iframe src="media-siklus2.pdf" class="w-full h-full border-0"></iframe>
+                            </div>
+                            <div class="text-right">
+                                <a href="media-siklus2.pdf" target="_blank" class="text-xs text-brand-blue hover:underline font-semibold"><i class="fa-solid fa-download mr-1"></i> Download / Buka File PDF di Tab Baru</a>
                             </div>
                         </div>
                     </div>
@@ -214,12 +214,15 @@ Tujuan pembelajaran perlu diperjelas: Tujuan menyelesaikan proyek pada tingkat C
                             <i class="fa-solid fa-clipboard-user text-brand-gold"></i> 4. Penilaian & Catatan Guru Pamong (Siklus 2)
                         </h4>
                         <p class="text-slate-700 text-sm text-justify-custom">
-                            Ulasan kinerja oleh Guru Pamong (<strong>Boby Hartawan, S.T.</strong>): Sangat baik dalam penguasaan kelas.
+                            Ulasan kinerja oleh Guru Pamong (<strong>Boby Hartawan, S.T.</strong>): Pelaksanaan praktik mengajar dinilai sangat baik dalam penguasaan kelas dan interaksi positif dengan peserta didik.
                         </p>
                         <div class="space-y-2">
                             <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Pratinjau Lembar Penilaian Guru Pamong (PDF):</span>
-                            <div class="relative w-full h-[450px] bg-slate-200 rounded-xl overflow-hidden border border-slate-300">
-                                <iframe src="https://drive.google.com/file/d/ID_NILAI_SIKLUS_2/preview" class="w-full h-full border-0"></iframe>
+                            <div class="relative w-full h-[500px] bg-slate-200 rounded-xl overflow-hidden border border-slate-300">
+                                <iframe src="penilaian-siklus2.pdf" class="w-full h-full border-0"></iframe>
+                            </div>
+                            <div class="text-right">
+                                <a href="penilaian-siklus2.pdf" target="_blank" class="text-xs text-brand-blue hover:underline font-semibold"><i class="fa-solid fa-download mr-1"></i> Download / Buka File PDF di Tab Baru</a>
                             </div>
                         </div>
                     </div>
@@ -240,16 +243,30 @@ Tujuan pembelajaran perlu diperjelas: Tujuan menyelesaikan proyek pada tingkat C
                             <i class="fa-solid fa-file-pdf text-red-500"></i> 1. Analisis & Dokumen Modul Ajar (Siklus 3)
                         </h4>
                         <p class="text-slate-700 text-sm text-justify-custom">
-                            <strong>Konteks & Tujuan:</strong> Modul disusun dengan penekanan pada pemecahan masalah studi kasus autentik untuk melatih kemampuan analitis dan kritis siswa.
+                            <strong>Konteks & Tujuan:</strong> Modul disusun dengan penekanan pada pemecahan masalah studi kasus autentik untuk melatih kemampuan analitis dan kritis siswa melalui model <em>Problem Based Learning</em>.
                         </p>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs bg-white p-4 rounded-xl border border-slate-200">
-                            <div><strong class="text-brand-blue">Kelebihan:</strong> Memicu argumen kritis dan kolaborasi kelompok.</div>
-                            <div><strong class="text-brand-blue">Kekurangan:</strong> Siswa berkemampuan dasar perlu bimbingan ekstra.</div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs bg-white p-5 rounded-xl border border-slate-200">
+                            <div>
+                                <strong class="text-brand-blue text-sm block mb-2"><i class="fa-solid fa-circle-check text-green-600 mr-1"></i> Kelebihan:</strong>
+                                <ul class="list-disc pl-4 space-y-1.5 text-slate-700">
+                                    <li>Memicu argumen kritis dan kolaborasi kelompok dalam memecahkan masalah nyata.</li>
+                                    <li>Meningkatkan keaktifan komunikasi antar anggota tim saat investigasi kasus.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <strong class="text-brand-blue text-sm block mb-2"><i class="fa-solid fa-circle-exclamation text-amber-600 mr-1"></i> Kekurangan:</strong>
+                                <ul class="list-disc pl-4 space-y-1.5 text-slate-700">
+                                    <li>Sebagian siswa berkemampuan dasar memerlukan bimbingan ekstra (scaffolding).</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="space-y-2">
-                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Pratinjau PDF Modul Ajar Siklus 3:</span>
-                            <div class="relative w-full h-[450px] bg-slate-200 rounded-xl overflow-hidden border border-slate-300">
-                                <iframe src="https://drive.google.com/file/d/ID_MODUL_SIKLUS_3/preview" class="w-full h-full border-0"></iframe>
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Pratinjau Dokumen Modul Ajar Siklus 3:</span>
+                            <div class="relative w-full h-[500px] bg-slate-200 rounded-xl overflow-hidden border border-slate-300">
+                                <iframe src="modul-siklus3.pdf" class="w-full h-full border-0"></iframe>
+                            </div>
+                            <div class="text-right">
+                                <a href="modul-siklus3.pdf" target="_blank" class="text-xs text-brand-blue hover:underline font-semibold"><i class="fa-solid fa-download mr-1"></i> Download / Buka File PDF di Tab Baru</a>
                             </div>
                         </div>
                     </div>
@@ -260,16 +277,29 @@ Tujuan pembelajaran perlu diperjelas: Tujuan menyelesaikan proyek pada tingkat C
                             <i class="fa-solid fa-laptop-code text-brand-gold"></i> 2. Analisis & Dokumen Media Ajar (Siklus 3)
                         </h4>
                         <p class="text-slate-700 text-sm text-justify-custom">
-                            <strong>Konteks & Tujuan:</strong> Menggunakan lembar kerja proyek digital serta video simulasi kasus nyata.
+                            <strong>Konteks & Tujuan:</strong> Menggunakan lembar kerja proyek digital serta video simulasi kasus nyata untuk memberikan gambaran konkrit permasalahan.
                         </p>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs bg-white p-4 rounded-xl border border-slate-200">
-                            <div><strong class="text-brand-blue">Kelebihan:</strong> Kontekstual dan menarik perhatian siswa.</div>
-                            <div><strong class="text-brand-blue">Kekurangan:</strong> Durasi penayangan harus dibatasi ketat.</div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs bg-white p-5 rounded-xl border border-slate-200">
+                            <div>
+                                <strong class="text-brand-blue text-sm block mb-2"><i class="fa-solid fa-circle-check text-green-600 mr-1"></i> Kelebihan:</strong>
+                                <ul class="list-disc pl-4 space-y-1.5 text-slate-700">
+                                    <li>Sangat kontekstual dan langsung menarik perhatian siswa sejak awal pembelajaran.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <strong class="text-brand-blue text-sm block mb-2"><i class="fa-solid fa-circle-exclamation text-amber-600 mr-1"></i> Kekurangan:</strong>
+                                <ul class="list-disc pl-4 space-y-1.5 text-slate-700">
+                                    <li>Durasi penayangan media perlu dibatasi agar tidak memotong waktu investigasi.</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="space-y-2">
-                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Pratinjau PDF Media Ajar Siklus 3:</span>
-                            <div class="relative w-full h-[450px] bg-slate-200 rounded-xl overflow-hidden border border-slate-300">
-                                <iframe src="https://drive.google.com/file/d/ID_MEDIA_SIKLUS_3/preview" class="w-full h-full border-0"></iframe>
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Pratinjau Dokumen Media Ajar Siklus 3:</span>
+                            <div class="relative w-full h-[500px] bg-slate-200 rounded-xl overflow-hidden border border-slate-300">
+                                <iframe src="media-siklus3.pdf" class="w-full h-full border-0"></iframe>
+                            </div>
+                            <div class="text-right">
+                                <a href="media-siklus3.pdf" target="_blank" class="text-xs text-brand-blue hover:underline font-semibold"><i class="fa-solid fa-download mr-1"></i> Download / Buka File PDF di Tab Baru</a>
                             </div>
                         </div>
                     </div>
@@ -290,12 +320,15 @@ Tujuan pembelajaran perlu diperjelas: Tujuan menyelesaikan proyek pada tingkat C
                             <i class="fa-solid fa-clipboard-user text-brand-gold"></i> 4. Penilaian & Catatan Guru Pamong (Siklus 3)
                         </h4>
                         <p class="text-slate-700 text-sm text-justify-custom">
-                            Ulasan Guru Pamong (<strong>Boby Hartawan, S.T.</strong>): Peningkatan kualitas fasilitasi diskusi kelompok sangat signifikan.
+                            Ulasan Guru Pamong (<strong>Boby Hartawan, S.T.</strong>): Peningkatan kualitas fasilitasi diskusi kelompok sangat signifikan dan terarah.
                         </p>
                         <div class="space-y-2">
                             <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Pratinjau Lembar Penilaian Guru Pamong (PDF):</span>
-                            <div class="relative w-full h-[450px] bg-slate-200 rounded-xl overflow-hidden border border-slate-300">
-                                <iframe src="https://drive.google.com/file/d/ID_NILAI_SIKLUS_3/preview" class="w-full h-full border-0"></iframe>
+                            <div class="relative w-full h-[500px] bg-slate-200 rounded-xl overflow-hidden border border-slate-300">
+                                <iframe src="penilaian-siklus3.pdf" class="w-full h-full border-0"></iframe>
+                            </div>
+                            <div class="text-right">
+                                <a href="penilaian-siklus3.pdf" target="_blank" class="text-xs text-brand-blue hover:underline font-semibold"><i class="fa-solid fa-download mr-1"></i> Download / Buka File PDF di Tab Baru</a>
                             </div>
                         </div>
                     </div>
@@ -316,16 +349,29 @@ Tujuan pembelajaran perlu diperjelas: Tujuan menyelesaikan proyek pada tingkat C
                             <i class="fa-solid fa-file-pdf text-red-500"></i> 1. Analisis & Dokumen Modul Ajar (Siklus 4)
                         </h4>
                         <p class="text-slate-700 text-sm text-justify-custom">
-                            <strong>Konteks & Tujuan:</strong> Integrasi penuh penguasaan konsep mandiri, unjuk kerja produk akhir, serta asesmen reflektif berbasis portofolio.
+                            <strong>Konteks & Tujuan:</strong> Integrasi penuh penguasaan konsep mandiri, unjuk kerja produk akhir, serta asesmen reflektif berbasis portofolio siswa.
                         </p>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs bg-white p-4 rounded-xl border border-slate-200">
-                            <div><strong class="text-brand-blue">Kelebihan:</strong> Integrasi utuh antara perencanaan dan asesmen formatif.</div>
-                            <div><strong class="text-brand-blue">Kekurangan:</strong> Manajemen waktu harus sangat disiplin.</div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs bg-white p-5 rounded-xl border border-slate-200">
+                            <div>
+                                <strong class="text-brand-blue text-sm block mb-2"><i class="fa-solid fa-circle-check text-green-600 mr-1"></i> Kelebihan:</strong>
+                                <ul class="list-disc pl-4 space-y-1.5 text-slate-700">
+                                    <li>Integrasi utuh antara perencanaan, pelaksanaan, dan asesmen formatif yang matang.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <strong class="text-brand-blue text-sm block mb-2"><i class="fa-solid fa-circle-exclamation text-amber-600 mr-1"></i> Kekurangan:</strong>
+                                <ul class="list-disc pl-4 space-y-1.5 text-slate-700">
+                                    <li>Manajemen waktu harus sangat disiplin karena cakupan aktivitas produk cukup luas.</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="space-y-2">
-                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Pratinjau PDF Modul Ajar Siklus 4:</span>
-                            <div class="relative w-full h-[450px] bg-slate-200 rounded-xl overflow-hidden border border-slate-300">
-                                <iframe src="https://drive.google.com/file/d/ID_MODUL_SIKLUS_4/preview" class="w-full h-full border-0"></iframe>
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Pratinjau Dokumen Modul Ajar Siklus 4:</span>
+                            <div class="relative w-full h-[500px] bg-slate-200 rounded-xl overflow-hidden border border-slate-300">
+                                <iframe src="modul-siklus4.pdf" class="w-full h-full border-0"></iframe>
+                            </div>
+                            <div class="text-right">
+                                <a href="modul-siklus4.pdf" target="_blank" class="text-xs text-brand-blue hover:underline font-semibold"><i class="fa-solid fa-download mr-1"></i> Download / Buka File PDF di Tab Baru</a>
                             </div>
                         </div>
                     </div>
@@ -336,16 +382,29 @@ Tujuan pembelajaran perlu diperjelas: Tujuan menyelesaikan proyek pada tingkat C
                             <i class="fa-solid fa-laptop-code text-brand-gold"></i> 2. Analisis & Dokumen Media Ajar (Siklus 4)
                         </h4>
                         <p class="text-slate-700 text-sm text-justify-custom">
-                            <strong>Konteks & Tujuan:</strong> Pemanfaatan media kuis digital sumatif dan portofolio pajangan karya siswa.
+                            <strong>Konteks & Tujuan:</strong> Pemanfaatan media kuis digital sumatif dan portofolio pajangan karya siswa guna memberikan apresiasi nyata terhadap hasil belajar.
                         </p>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs bg-white p-4 rounded-xl border border-slate-200">
-                            <div><strong class="text-brand-blue">Kelebihan:</strong> Menumbuhkan rasa percaya diri dan umpan balik transparan.</div>
-                            <div><strong class="text-brand-blue">Kekurangan:</strong> Penataan ruang pameran butuh waktu tambahan.</div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs bg-white p-5 rounded-xl border border-slate-200">
+                            <div>
+                                <strong class="text-brand-blue text-sm block mb-2"><i class="fa-solid fa-circle-check text-green-600 mr-1"></i> Kelebihan:</strong>
+                                <ul class="list-disc pl-4 space-y-1.5 text-slate-700">
+                                    <li>Menumbuhkan rasa percaya diri peserta didik dan umpan balik transparan.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <strong class="text-brand-blue text-sm block mb-2"><i class="fa-solid fa-circle-exclamation text-amber-600 mr-1"></i> Kekurangan:</strong>
+                                <ul class="list-disc pl-4 space-y-1.5 text-slate-700">
+                                    <li>Penataan ruang pameran karya membutuhkan waktu tambahan di luar jam utama.</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="space-y-2">
-                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Pratinjau PDF Media Ajar Siklus 4:</span>
-                            <div class="relative w-full h-[450px] bg-slate-200 rounded-xl overflow-hidden border border-slate-300">
-                                <iframe src="https://drive.google.com/file/d/ID_MEDIA_SIKLUS_4/preview" class="w-full h-full border-0"></iframe>
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Pratinjau Dokumen Media Ajar Siklus 4:</span>
+                            <div class="relative w-full h-[500px] bg-slate-200 rounded-xl overflow-hidden border border-slate-300">
+                                <iframe src="media-siklus4.pdf" class="w-full h-full border-0"></iframe>
+                            </div>
+                            <div class="text-right">
+                                <a href="media-siklus4.pdf" target="_blank" class="text-xs text-brand-blue hover:underline font-semibold"><i class="fa-solid fa-download mr-1"></i> Download / Buka File PDF di Tab Baru</a>
                             </div>
                         </div>
                     </div>
@@ -370,8 +429,11 @@ Tujuan pembelajaran perlu diperjelas: Tujuan menyelesaikan proyek pada tingkat C
                         </p>
                         <div class="space-y-2">
                             <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Pratinjau Lembar Penilaian Guru Pamong (PDF):</span>
-                            <div class="relative w-full h-[450px] bg-slate-200 rounded-xl overflow-hidden border border-slate-300">
-                                <iframe src="https://drive.google.com/file/d/ID_NILAI_SIKLUS_4/preview" class="w-full h-full border-0"></iframe>
+                            <div class="relative w-full h-[500px] bg-slate-200 rounded-xl overflow-hidden border border-slate-300">
+                                <iframe src="penilaian-siklus4.pdf" class="w-full h-full border-0"></iframe>
+                            </div>
+                            <div class="text-right">
+                                <a href="penilaian-siklus4.pdf" target="_blank" class="text-xs text-brand-blue hover:underline font-semibold"><i class="fa-solid fa-download mr-1"></i> Download / Buka File PDF di Tab Baru</a>
                             </div>
                         </div>
                     </div>
@@ -439,20 +501,16 @@ Tujuan pembelajaran perlu diperjelas: Tujuan menyelesaikan proyek pada tingkat C
     <!-- SCRIPT INTERAKTIF TAB & MENU -->
     <script>
         function switchSiklus(nomor) {
-            // Sembunyikan semua konten siklus
             document.querySelectorAll('.siklus-content').forEach(el => {
                 el.classList.add('hidden');
             });
-            // Tampilkan konten siklus yang dipilih
             document.getElementById(`content-siklus-${nomor}`).classList.remove('hidden');
 
-            // Reset warna semua tombol tab
             [2, 3, 4].forEach(n => {
                 const btn = document.getElementById(`btn-siklus-${n}`);
                 btn.className = "px-6 py-3 rounded-xl font-bold text-sm transition shadow-md bg-white text-slate-700 border border-slate-300 hover:bg-slate-100";
             });
 
-            // Beri warna aktif pada tombol yang diklik
             const activeBtn = document.getElementById(`btn-siklus-${nomor}`);
             activeBtn.className = "px-6 py-3 rounded-xl font-bold text-sm transition shadow-md bg-brand-blue text-white";
         }
