@@ -31,6 +31,15 @@
             }
         }
     </script>
+    <style>
+        .blue-gradient {
+            background: linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%);
+        }
+        .text-justify-custom {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+    </style>
 </head>
 <body class="bg-brand-bglight text-slate-800 font-sans leading-relaxed antialiased min-h-screen flex flex-col justify-between">
 
@@ -76,35 +85,132 @@
     </header>
 
     <main class="flex-grow py-12">
-        <section id="uts" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
+        <section id="uts" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="text-center mb-8">
                 <span class="text-xs font-bold text-brand-darkblue uppercase tracking-wider bg-brand-gold px-3 py-1 rounded-full">Ujian Tengah Semester</span>
                 <h2 class="text-3xl font-bold text-brand-blue mt-3 flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-file-signature text-brand-gold"></i> Produk Praktik Mengajar Terbaik - Siklus 1
+                    <i class="fa-solid fa-file-signature text-brand-gold"></i> Produk Praktik Mengajar - Siklus 1
                 </h2>
                 <div class="w-20 h-1 bg-brand-gold mx-auto mt-2 rounded-full"></div>
+                <p class="text-slate-600 mt-3 max-w-2xl mx-auto text-sm">Dokumentasi artefak, analisis modul, media, video pembelajaran, dan penilaian guru pamong pada siklus pertama.</p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <!-- Modul Document -->
-                <div class="bg-white rounded-2xl shadow-lg border border-slate-200 p-6 flex flex-col justify-between">
-                    <div>
-                        <span class="px-3 py-1 bg-blue-100 text-brand-blue text-xs font-bold rounded-full uppercase">Modul Ajar Siklus 1</span>
-                        <h3 class="text-xl font-bold text-slate-800 my-3">Perangkat Pembelajaran Lengkap Siklus 1</h3>
-                        <p class="text-slate-600 text-sm mb-6">Dokumen perencanaan lengkap beserta RPP/Modul Ajar, Bahan Ajar, LKPD, dan Instrument Asesmen.</p>
-                    </div>
-                    <a href="#" class="w-full py-3 bg-brand-blue text-white font-bold rounded-lg text-center hover:bg-blue-900 transition flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-file-pdf"></i> Buka / Unduh Modul Ajar
-                    </a>
+            <!-- CONTAINER UTAMA SIKLUS 1 -->
+            <div class="bg-white rounded-3xl shadow-xl border border-slate-200 p-6 sm:p-10 space-y-8">
+                <div class="border-b pb-4 flex items-center justify-between">
+                    <h3 class="text-2xl font-bold text-brand-blue">Detail Praktik Mengajar - Siklus 1</h3>
+                    <span class="px-3 py-1 bg-blue-100 text-brand-blue text-xs font-bold rounded-full">Fokus: Perencanaan & Pelaksanaan Dasar</span>
                 </div>
 
-                <!-- Video Embed -->
-                <div class="bg-white rounded-2xl shadow-lg border border-slate-200 p-6 flex flex-col justify-between">
-                    <div>
-                        <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full uppercase">Video Pembelajaran</span>
-                        <h3 class="text-xl font-bold text-slate-800 my-3">Video Pelaksanaan Praktik Mengajar Siklus 1</h3>
-                        <div class="relative w-full rounded-xl overflow-hidden bg-black aspect-video mb-4">
-                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Siklus 1" frameborder="0" allowfullscreen></iframe>
+                <!-- 1. Modul Ajar -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-4">
+                    <h4 class="font-bold text-brand-blue flex items-center gap-2 text-lg">
+                        <i class="fa-solid fa-file-pdf text-red-500"></i> 1. Analisis & Dokumen Modul Ajar (Siklus 1)
+                    </h4>
+                    <p class="text-slate-700 text-sm text-justify-custom">
+                        <strong>Konteks & Tujuan:</strong> Rencana Pembelajaran Mendalam (RPM) disusun untuk siklus pertama dengan fokus membangun fondasi pemahaman materi awal secara sistematis. Pembelajaran dirancang untuk menciptakan keterlibatan aktif peserta didik melalui pendekatan kontekstual serta pemodelan konsep yang terstruktur.
+                    </p>
+
+                    <!-- Kelebihan & Kekurangan dalam Bentuk Point -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs bg-white p-5 rounded-xl border border-slate-200">
+                        <div>
+                            <strong class="text-brand-blue text-sm block mb-2"><i class="fa-solid fa-circle-check text-green-600 mr-1"></i> Kelebihan:</strong>
+                            <ul class="list-disc pl-4 space-y-1.5 text-slate-700">
+                                <li class="text-justify-custom">Penyusunan komponen perangkat pembelajaran sudah runtut sesuai standar kurikulum.</li>
+                                <li class="text-justify-custom">Mampu membangun pemahaman awal konsep dasar bagi peserta didik.</li>
+                                <li class="text-justify-custom">Langkah-langkah kegiatan pembelajaran terstruktur dengan jelas.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong class="text-brand-blue text-sm block mb-2"><i class="fa-solid fa-circle-exclamation text-amber-600 mr-1"></i> Kekurangan:</strong>
+                            <ul class="list-disc pl-4 space-y-1.5 text-slate-700">
+                                <li class="text-justify-custom">Variasi diferensiasi belajar siswa masih perlu diperdalam pada pertemuan awal.</li>
+                                <li class="text-justify-custom">Alokasi waktu transisi antar kegiatan masih memerlukan penyesuaian.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Pratinjau PDF Lokal -->
+                    <div class="space-y-2">
+                        <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Pratinjau Dokumen Modul Ajar Siklus 1:</span>
+                        <div class="relative w-full h-[500px] bg-slate-200 rounded-xl overflow-hidden border border-slate-300">
+                            <!-- Sesuaikan nama file PDF lokal Anda -->
+                            <iframe src="modul-siklus1.pdf" class="w-full h-full border-0"></iframe>
+                        </div>
+                        <div class="text-right">
+                            <a href="modul-siklus1.pdf" target="_blank" class="text-xs text-brand-blue hover:underline font-semibold"><i class="fa-solid fa-download mr-1"></i> Download / Buka File PDF di Tab Baru</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Media Ajar -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-4">
+                    <h4 class="font-bold text-brand-blue flex items-center gap-2 text-lg">
+                        <i class="fa-solid fa-laptop-code text-brand-gold"></i> 2. Analisis & Dokumen Media Ajar (Siklus 1)
+                    </h4>
+                    <p class="text-slate-700 text-sm text-justify-custom">
+                        <strong>Konteks & Tujuan:</strong> Media pembelajaran pada siklus 1 menggunakan sajian visual interaktif untuk membantu menjembatani pemahaman konsep abstrak ke bentuk konkrit yang mudah diamati oleh peserta didik.
+                    </p>
+
+                    <!-- Kelebihan & Kekurangan dalam Bentuk Point -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs bg-white p-5 rounded-xl border border-slate-200">
+                        <div>
+                            <strong class="text-brand-blue text-sm block mb-2"><i class="fa-solid fa-circle-check text-green-600 mr-1"></i> Kelebihan:</strong>
+                            <ul class="list-disc pl-4 space-y-1.5 text-slate-700">
+                                <li class="text-justify-custom">Membantu menarik perhatian awal peserta didik saat penyampaian materi.</li>
+                                <li class="text-justify-custom">Penyajian visual cukup jelas untuk menerangkan konsep utama.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong class="text-brand-blue text-sm block mb-2"><i class="fa-solid fa-circle-exclamation text-amber-600 mr-1"></i> Kekurangan:</strong>
+                            <ul class="list-disc pl-4 space-y-1.5 text-slate-700">
+                                <li class="text-justify-custom">Belum sepenuhnya mengakomodasi eksplorasi mandiri peserta didik secara digital.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Pratinjau PDF Lokal -->
+                    <div class="space-y-2">
+                        <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Pratinjau Dokumen Media Ajar Siklus 1:</span>
+                        <div class="relative w-full h-[500px] bg-slate-200 rounded-xl overflow-hidden border border-slate-300">
+                            <!-- Sesuaikan nama file PDF lokal Anda -->
+                            <iframe src="media-siklus1.pdf" class="w-full h-full border-0"></iframe>
+                        </div>
+                        <div class="text-right">
+                            <a href="media-siklus1.pdf" target="_blank" class="text-xs text-brand-blue hover:underline font-semibold"><i class="fa-solid fa-download mr-1"></i> Download / Buka File PDF di Tab Baru</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Video Pembelajaran -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-4">
+                    <h4 class="font-bold text-brand-blue flex items-center gap-2 text-lg">
+                        <i class="fa-solid fa-video text-brand-gold"></i> 3. Rekaman Video Praktik Mengajar (Siklus 1)
+                    </h4>
+                    <p class="text-slate-700 text-sm text-justify-custom">
+                        Dokumentasi video pelaksanaan praktik mengajar pada siklus pertama di kelas.
+                    </p>
+                    <div class="relative w-full rounded-2xl overflow-hidden bg-black aspect-video shadow-inner">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Siklus 1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- 4. Penilaian Guru Pamong -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-4">
+                    <h4 class="font-bold text-brand-blue flex items-center gap-2 text-lg">
+                        <i class="fa-solid fa-clipboard-user text-brand-gold"></i> 4. Penilaian & Catatan Guru Pamong (Siklus 1)
+                    </h4>
+                    <p class="text-slate-700 text-sm text-justify-custom">
+                        Catatan evaluasi dan lembar penilaian dari Guru Pamong terhadap pelaksanaan pembelajaran Siklus 1.
+                    </p>
+                    <div class="space-y-2">
+                        <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Pratinjau Lembar Penilaian Guru Pamong (PDF):</span>
+                        <div class="relative w-full h-[500px] bg-slate-200 rounded-xl overflow-hidden border border-slate-300">
+                            <!-- Sesuaikan nama file PDF lokal Anda -->
+                            <iframe src="penilaian-siklus1.pdf" class="w-full h-full border-0"></iframe>
+                        </div>
+                        <div class="text-right">
+                            <a href="penilaian-siklus1.pdf" target="_blank" class="text-xs text-brand-blue hover:underline font-semibold"><i class="fa-solid fa-download mr-1"></i> Download / Buka File PDF di Tab Baru</a>
                         </div>
                     </div>
                 </div>
@@ -119,6 +225,7 @@
         </div>
     </footer>
 
+    <!-- SCRIPT MOBILE MENU -->
     <script>
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
