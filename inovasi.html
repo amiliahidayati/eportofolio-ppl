@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inovasi Pembelajaran: Kartu Data & LKPD Detektif Data</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBlue: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        brandYellow: {
+                            100: '#fef9c3',
+                            300: '#fde047',
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Font Inter & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-pattern {
+            background-color: #1e3a8a;
+            background-image: radial-gradient(#facc15 0.75px, transparent 0.75px), radial-gradient(#facc15 0.75px, #1e3a8a 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+            background-opacity: 0.1;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brandYellow-400 selection:text-brandBlue-900">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-brandBlue-900/95 backdrop-blur-md text-white border-b border-brandYellow-400/30 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brandYellow-400 to-amber-300 text-brandBlue-900 flex items-center justify-center font-black text-xl shadow-lg border-2 border-white">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs uppercase tracking-wider font-semibold text-brandYellow-400 block">Portofolio Inovasi Pembelajaran</span>
+                        <h1 class="text-lg font-bold text-white tracking-tight leading-none">Detektif Data</h1>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                    <a href="#tentang" class="hover:text-brandYellow-400 transition-colors">Tentang Inovasi</a>
+                    <a href="#kebaruan" class="hover:text-brandYellow-400 transition-colors">Keunggulan</a>
+                    <a href="#prototype" class="hover:text-brandYellow-400 transition-colors">Prototype Media</a>
+                    <a href="#implementasi" class="hover:text-brandYellow-400 transition-colors">Implementasi</a>
+                    <a href="#dokumentasi" class="hover:text-brandYellow-400 transition-colors">Dokumentasi</a>
+                </nav>
+
+                <div class="hidden md:flex items-center space-x-3">
+                    <button onclick="window.print()" class="px-4 py-2 bg-brandYellow-400 hover:bg-brandYellow-300 text-brandBlue-900 font-bold text-sm rounded-lg shadow-md transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-print"></i>
+                        <span>Cetak Ringkasan</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2 rounded-md text-brandYellow-400 hover:text-white focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brandBlue-900 border-b border-brandBlue-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#tentang" class="block py-2 text-white hover:text-brandYellow-400 font-medium">Tentang Inovasi</a>
+            <a href="#kebaruan" class="block py-2 text-white hover:text-brandYellow-400 font-medium">Keunggulan</a>
+            <a href="#prototype" class="block py-2 text-white hover:text-brandYellow-400 font-medium">Prototype Media</a>
+            <a href="#implementasi" class="block py-2 text-white hover:text-brandYellow-400 font-medium">Implementasi</a>
+            <a href="#dokumentasi" class="block py-2 text-white hover:text-brandYellow-400 font-medium">Dokumentasi</a>
+            <button onclick="window.print()" class="w-full mt-2 py-2.5 bg-brandYellow-400 text-brandBlue-900 font-bold rounded-lg text-center flex items-center justify-center gap-2">
+                <i class="fa-solid fa-print"></i> Cetak Ringkasan
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-brandBlue-900 via-brandBlue-800 to-indigo-950 text-white overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28">
+        <div class="absolute inset-0 opacity-10 bg-pattern"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brandYellow-400/20 border border-brandYellow-400/40 text-brandYellow-300 text-xs sm:text-sm font-semibold">
+                        <span class="w-2 h-2 rounded-full bg-brandYellow-400 animate-pulse"></span>
+                        Inovasi Pembelajaran Matematika & Analisis Data
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
+                        Media Pembelajaran Terintegrasi <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandYellow-300 via-brandYellow-400 to-amber-300">
+                            Kartu Data & LKPD Detektif Data
+                        </span>
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Solusi kontekstual dan komunikatif berbasis gamifikasi yang mengubah pembelajaran analisis data abstrak menjadi Misi Penyelidikan Seru bagi siswa!
+                    </p>
+
+                    <div class="pt-4 flex flex-wrap gap-4 justify-center lg:justify-start">
+                        <a href="#prototype" class="px-6 py-3.5 bg-brandYellow-400 hover:bg-brandYellow-300 text-brandBlue-900 font-bold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                            <i class="fa-solid fa-folder-open"></i> Eksplorasi Prototype
+                        </a>
+                        <a href="#implementasi" class="px-6 py-3.5 bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold rounded-xl backdrop-blur-sm transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-chalkboard-user"></i> Langkah Implementasi
+                        </a>
+                    </div>
+
+                    <!-- Key Stats Highlights -->
+                    <div class="pt-8 grid grid-cols-3 gap-4 border-t border-white/10 text-center sm:text-left">
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-brandYellow-400">100%</p>
+                            <p class="text-xs text-slate-300">Gamifikasi Aktif</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-brandYellow-400">HOTS</p>
+                            <p class="text-xs text-slate-300">Orientasi Berpikir Kritis</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-brandYellow-400">Dual</p>
+                            <p class="text-xs text-slate-300">Media Terintegrasi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic Illustration -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <!-- Decorative backglow -->
+                        <div class="absolute -inset-1 bg-gradient-to-r from-brandYellow-400 to-blue-500 rounded-3xl blur-xl opacity-30"></div>
+                        
+                        <!-- Interactive Hero Badge Card -->
+                        <div class="relative bg-brandBlue-800 border-2 border-brandYellow-400/50 rounded-2xl p-6 shadow-2xl text-white">
+                            <div class="flex items-center justify-between pb-4 border-b border-white/10">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-10 h-10 rounded-full bg-brandYellow-400 text-brandBlue-900 flex items-center justify-center font-bold">
+                                        <i class="fa-solid fa-user-secret text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-white text-sm">BERKAS DETEKTIF DATA</h3>
+                                        <p class="text-xs text-brandYellow-300">Status: MISI AKTIF</p>
+                                    </div>
+                                </div>
+                                <span class="bg-red-500/20 text-red-300 border border-red-500/40 text-xs px-2.5 py-1 rounded-full font-semibold">Kasus #082</span>
+                            </div>
+
+                            <div class="py-5 space-y-3">
+                                <div class="bg-brandBlue-900/80 p-3 rounded-lg border border-white/10">
+                                    <p class="text-xs font-semibold text-slate-400">Target Misi:</p>
+                                    <p class="text-sm font-medium text-brandYellow-300">Memecahkan Rahasia Frekuensi Modus & Nilai Rata-rata Penjualan Kantin</p>
+                                </div>
+                                <div class="flex items-center justify-between text-xs bg-brandBlue-900/50 p-2.5 rounded-lg">
+                                    <span class="text-slate-300"><i class="fa-solid fa-box-archive mr-1.5 text-brandYellow-400"></i> Alat Kelengkapan:</span>
+                                    <span class="font-bold text-white">Kartu Data + LKPD</span>
+                                </div>
+                            </div>
+
+                            <div class="pt-2">
+                                <button onclick="openModal('modal-kartu')" class="w-full py-2.5 bg-brandYellow-400 hover:bg-brandYellow-300 text-brandBlue-900 font-bold rounded-lg text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-eye"></i> Simulasikan Contoh Kartu Data
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Tabs / Info Sections (Latar Belakang, Tujuan, Kebaruan, Tindak Lanjut) -->
+    <section id="tentang" class="py-16 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brandBlue-600 mb-2">Kerangka Inovasi</h2>
+                <p class="text-3xl font-extrabold text-slate-900">Mengapa Inovasi Ini Penting?</p>
+                <div class="w-16 h-1 bg-brandYellow-400 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <!-- Interactive Tab Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8">
+                <button onclick="switchTab('latar-belakang')" id="tab-btn-latar-belakang" class="tab-btn active px-5 py-2.5 rounded-xl text-sm font-bold transition-all border-2 border-brandBlue-900 bg-brandBlue-900 text-white shadow-md">
+                    <i class="fa-solid fa-circle-exclamation mr-2"></i> Latar Belakang
+                </button>
+                <button onclick="switchTab('tujuan')" id="tab-btn-tujuan" class="tab-btn px-5 py-2.5 rounded-xl text-sm font-bold transition-all border-2 border-slate-200 bg-slate-100 text-slate-700 hover:bg-slate-200">
+                    <i class="fa-solid fa-bullseye mr-2"></i> Tujuan Pengembangan
+                </button>
+                <button onclick="switchTab('kebaruan')" id="tab-btn-kebaruan" class="tab-btn px-5 py-2.5 rounded-xl text-sm font-bold transition-all border-2 border-slate-200 bg-slate-100 text-slate-700 hover:bg-slate-200">
+                    <i class="fa-solid fa-wand-magic-sparkles mr-2"></i> Keunggulan & Kebaruan
+                </button>
+                <button onclick="switchTab('tindak-lanjut')" id="tab-btn-tindak-lanjut" class="tab-btn px-5 py-2.5 rounded-xl text-sm font-bold transition-all border-2 border-slate-200 bg-slate-100 text-slate-700 hover:bg-slate-200">
+                    <i class="fa-solid fa-arrow-trend-up mr-2"></i> Rencana Tindak Lanjut
+                </button>
+            </div>
+
+            <!-- Tab Contents Container -->
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-10 shadow-sm min-h-[300px]">
+                
+                <!-- Tab: Latar Belakang -->
+                <div id="tab-latar-belakang" class="tab-content space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-red-100 text-red-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-triangle-exclamation text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Latar Belakang Permasalahan</h3>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">
+                        Materi analisis data dan statistik dasar sering dianggap rumit, membosankan, serta terlalu teoritis oleh sebagian besar siswa. Hal ini berakibat pada rendahnya literasi data dan kemampuan analisis matematis.
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-6 pt-2">
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-brandYellow-400 transition-all">
+                            <div class="w-8 h-8 rounded-full bg-brandYellow-100 text-brandYellow-600 flex items-center justify-center font-bold mb-3">1</div>
+                            <h4 class="font-bold text-slate-800 mb-1">Abstrak & Monoton</h4>
+                            <p class="text-sm text-slate-600">Penyajian angka-angka polos tanpa konteks dunia nyata membuat siswa kesulitan memahami relevansi materi data.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-brandYellow-400 transition-all">
+                            <div class="w-8 h-8 rounded-full bg-brandYellow-100 text-brandYellow-600 flex items-center justify-center font-bold mb-3">2</div>
+                            <h4 class="font-bold text-slate-800 mb-1">Rendahnya Partisipasi Siswa</h4>
+                            <p class="text-sm text-slate-600">Siswa cenderung pasif karena metode pembelajaran dominan satu arah (ceramah dan rumus hafalan).</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-brandYellow-400 transition-all">
+                            <div class="w-8 h-8 rounded-full bg-brandYellow-100 text-brandYellow-600 flex items-center justify-center font-bold mb-3">3</div>
+                            <h4 class="font-bold text-slate-800 mb-1">Kebutuhan Media Konkret</h4>
+                            <p class="text-sm text-slate-600">Diperlukan alat bantu fisik/manipulatif terstruktur berbasis permainan (gamifikasi) untuk menjembatani konsep konseptual.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab: Tujuan -->
+                <div id="tab-tujuan" class="tab-content hidden space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-bullseye text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Tujuan Utama Pengembangan</h3>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-6 pt-2">
+                        <div class="bg-white p-6 rounded-xl border-l-4 border-brandBlue-900 shadow-sm">
+                            <i class="fa-solid fa-gamepad text-2xl text-brandBlue-600 mb-3"></i>
+                            <h4 class="font-bold text-slate-800 text-base mb-2">Meningkatkan Engagement</h4>
+                            <p class="text-sm text-slate-600">Meningkatkan keterlibatan aktif dan minat belajar siswa melalui skenario permainan detektif yang menyenangkan.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl border-l-4 border-brandYellow-400 shadow-sm">
+                            <i class="fa-solid fa-brain text-2xl text-brandYellow-500 mb-3"></i>
+                            <h4 class="font-bold text-slate-800 text-base mb-2">Melatih Keterampilan HOTS</h4>
+                            <p class="text-sm text-slate-600">Mendorong pemikiran kritis tingkat tinggi dalam memilah, mengolah (mean, median, modus), dan menyajikan data.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl border-l-4 border-brandBlue-900 shadow-sm">
+                            <i class="fa-solid fa-chalkboard-user text-2xl text-brandBlue-600 mb-3"></i>
+                            <h4 class="font-bold text-slate-800 text-base mb-2">Penyediaan Media Terstruktur</h4>
+                            <p class="text-sm text-slate-600">Memberikan panduan pembelajaran yang praktis, fleksibel, dan mudah direplikasi oleh guru di berbagai kelas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab: Kebaruan & Keunggulan -->
+                <div id="tab-kebaruan" class="tab-content hidden space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-star text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Kebaruan & Keunggulan Inovasi</h3>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 flex gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-brandBlue-50 text-brandBlue-900 shrink-0 flex items-center justify-center font-bold text-lg">
+                                <i class="fa-solid fa-layer-group"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 mb-1">Integrasi Dual-Media</h4>
+                                <p class="text-sm text-slate-600">Sinergi antara **Kartu Data fisik** sebagai manipulatif konkret dengan **LKPD Tematik** sebagai lembar penyelidikan sistematis.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 flex gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-brandYellow-100 text-brandYellow-600 shrink-0 flex items-center justify-center font-bold text-lg">
+                                <i class="fa-solid fa-user-ninja"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 mb-1">Gamifikasi Roleplay</h4>
+                                <p class="text-sm text-slate-600">Siswa tidak sekadar mengerjakan soal, melainkan berperan sebagai **Detektif Data** yang bertugas memecahkan studi kasus misteri.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 flex gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-brandYellow-100 text-brandYellow-600 shrink-0 flex items-center justify-center font-bold text-lg">
+                                <i class="fa-solid fa-sliders"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 mb-1">Kontekstual & Pembelajaran Diferensiasi</h4>
+                                <p class="text-sm text-slate-600">Skenario kasus diangkat dari lingkungan nyata (kantin, preferensi hobi, nilai) dan tingkat kesulitan kartu dapat disesuaikan kelompok.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 flex gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-brandBlue-50 text-brandBlue-900 shrink-0 flex items-center justify-center font-bold text-lg">
+                                <i class="fa-solid fa-rotate-right"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 mb-1">Praktis & Dapat Dipakai Berulang (Reusable)</h4>
+                                <p class="text-sm text-slate-600">Kartu dibuat tahan lama dan dapat dipadupadankan dengan variasi kasus baru tanpa perlu mencetak ulang seluruh komponen.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab: Tindak Lanjut -->
+                <div id="tab-tindak-lanjut" class="tab-content hidden space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-rocket text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">Rencana Tindak Lanjut & Pengembangan</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 flex items-start gap-4">
+                            <span class="px-3 py-1 bg-brandBlue-900 text-brandYellow-400 text-xs font-bold rounded-md uppercase shrink-0 mt-0.5">Fase 1</span>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Pengayaan Skenario Kasus Kompleks</h4>
+                                <p class="text-sm text-slate-600 mt-1">Mengembangkan kasus berbasis data nyata dari lingkungan sekitar sekolah, seperti data kebersihan kelas, transaksi koperasi, atau preferensi minat bakat digital.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 flex items-start gap-4">
+                            <span class="px-3 py-1 bg-brandYellow-400 text-brandBlue-900 text-xs font-bold rounded-md uppercase shrink-0 mt-0.5">Fase 2</span>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Pengembangan Platform Digital (E-Cards)</h4>
+                                <p class="text-sm text-slate-600 mt-1">Mengintegrasikan kartu data berbasis fisik dengan *Web Interactive E-Cards* dan dashboard investigasi digital untuk pembelajaran blended-learning.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 flex items-start gap-4">
+                            <span class="px-3 py-1 bg-brandBlue-900 text-brandYellow-400 text-xs font-bold rounded-md uppercase shrink-0 mt-0.5">Fase 3</span>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Diseminasi & Komunitas Belajar (MGMP)</h4>
+                                <p class="text-sm text-slate-600 mt-1">Bagikan template media dan melakukan workshop implementasi kepada rekan-rekan guru matematika di Komunitas Belajar (Kombel) dan MGMP daerah.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Prototype Gallery Section -->
+    <section id="prototype" class="py-16 bg-slate-100 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brandBlue-600 mb-2">Desain Komponen</h2>
+                <p class="text-3xl font-extrabold text-slate-900">Rancangan & Prototype Media</p>
+                <p class="text-slate-600 text-sm mt-2">Klik pada komponen di bawah untuk membuka simulasi/preview interaktif.</p>
+                <div class="w-16 h-1 bg-brandYellow-400 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Card Prototype 1: Kartu Data -->
+                <div class="bg-white rounded-2xl border-2 border-slate-200 overflow-hidden shadow-md hover:shadow-xl transition-all group">
+                    <div class="bg-brandBlue-900 p-6 text-white relative">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="bg-brandYellow-400 text-brandBlue-900 text-xs font-bold px-2.5 py-1 rounded-md uppercase">Media Manipulatif</span>
+                                <h3 class="text-2xl font-bold mt-2 text-white">Kartu Data Detektif</h3>
+                            </div>
+                            <i class="fa-solid fa-id-card text-4xl text-brandYellow-400/80"></i>
+                        </div>
+                        <p class="text-xs text-slate-300 mt-2">Set kartu fisik berisi kumpulan atribut data, petunjuk khusus, dan kode rahasia penyelidikan.</p>
+                    </div>
+
+                    <div class="p-6 space-y-4">
+                        <div class="border border-dashed border-slate-300 rounded-xl p-4 bg-slate-50 flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-lg bg-brandYellow-100 text-brandYellow-600 flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-clone"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold text-slate-800">Spesifikasi Kartu</p>
+                                    <p class="text-xs text-slate-500">Ukuran A6 (Laminasi Keras, Reusable)</p>
+                                </div>
+                            </div>
+                            <span class="text-xs bg-slate-200 px-2 py-1 rounded font-semibold text-slate-700">Set 24 Kartu</span>
+                        </div>
+
+                        <div class="text-sm text-slate-600 space-y-2">
+                            <p class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Memuat data numerik dan kategori acak</p>
+                            <p class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Dilengkapi petunjuk variabel misteri</p>
+                            <p class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Kode warna berdasarkan tingkat kesulitan</p>
+                        </div>
+
+                        <button onclick="openModal('modal-kartu')" class="w-full py-3 bg-brandBlue-900 hover:bg-brandBlue-800 text-white font-bold rounded-xl transition-colors flex items-center justify-center gap-2 text-sm shadow-md">
+                            <i class="fa-solid fa-expand"></i> Simulasikan / Pratinjau Kartu Data
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card Prototype 2: LKPD Detektif Data -->
+                <div class="bg-white rounded-2xl border-2 border-slate-200 overflow-hidden shadow-md hover:shadow-xl transition-all group">
+                    <div class="bg-brandYellow-400 p-6 text-brandBlue-900 relative">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="bg-brandBlue-900 text-white text-xs font-bold px-2.5 py-1 rounded-md uppercase">Lembar Kerja Tematik</span>
+                                <h3 class="text-2xl font-extrabold mt-2 text-brandBlue-900">LKPD Detektif Data</h3>
+                            </div>
+                            <i class="fa-solid fa-file-pen text-4xl text-brandBlue-900/70"></i>
+                        </div>
+                        <p class="text-xs text-brandBlue-950/80 mt-2 font-medium">Lembar panduan investigasi terstruktur dari formulasi masalah hingga penarikan kesimpulan.</p>
+                    </div>
+
+                    <div class="p-6 space-y-4">
+                        <div class="border border-dashed border-slate-300 rounded-xl p-4 bg-slate-50 flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-lg bg-brandBlue-100 text-brandBlue-900 flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-book-open"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold text-slate-800">Format LKPD</p>
+                                    <p class="text-xs text-slate-500">Skenario Berkas Kasus + Tabel & Grafik</p>
+                                </div>
+                            </div>
+                            <span class="text-xs bg-slate-200 px-2 py-1 rounded font-semibold text-slate-700">4 Halaman Interaktif</span>
+                        </div>
+
+                        <div class="text-sm text-slate-600 space-y-2">
+                            <p class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Section 1: Lembar Misi Kasus Detektif</p>
+                            <p class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Section 2: Tabel Matriks Pengolahan Data</p>
+                            <p class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Section 3: Canvas Pembuatan Diagram/Grafik</p>
+                        </div>
+
+                        <button onclick="openModal('modal-lkpd')" class="w-full py-3 bg-brandYellow-400 hover:bg-brandYellow-300 text-brandBlue-900 font-bold rounded-xl transition-colors flex items-center justify-center gap-2 text-sm shadow-md">
+                            <i class="fa-solid fa-expand"></i> Pratinjau Struktur LKPD
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Steps Section (Pengenalan, Pelaksanaan, Refleksi) -->
+    <section id="implementasi" class="py-16 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brandBlue-600 mb-2">Skenario Pembelajaran</h2>
+                <p class="text-3xl font-extrabold text-slate-900">Implementasi Dalam Pembelajaran</p>
+                <p class="text-slate-600 text-sm mt-2">3 Tahapan terstruktur penerapan media Kartu Data & LKPD Detektif Data di kelas.</p>
+                <div class="w-16 h-1 bg-brandYellow-400 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <!-- Timeline Steps Layout -->
+            <div class="grid lg:grid-cols-3 gap-8 relative">
+                
+                <!-- Stage 1 -->
+                <div class="bg-slate-50 border-2 border-brandBlue-900/20 rounded-2xl p-6 relative hover:border-brandYellow-400 transition-all flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-10 h-10 rounded-xl bg-brandBlue-900 text-brandYellow-400 font-black text-lg flex items-center justify-center shadow">1</span>
+                            <span class="text-xs font-bold text-brandBlue-900 bg-brandBlue-100 px-3 py-1 rounded-full uppercase">Tahap Orientasi</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Tahap Pengenalan</h3>
+                        <p class="text-xs text-brandBlue-600 font-semibold mb-4">Orientation & Ice Breaking</p>
+                        
+                        <ul class="text-sm text-slate-600 space-y-3">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-dot text-brandYellow-500 text-xs mt-1"></i>
+                                <span>Guru membuka sesi dengan mengenalkan peran siswa sebagai **"Detektif Data"**.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-dot text-brandYellow-500 text-xs mt-1"></i>
+                                <span>Membagikan Lencana Detektif, Kartu Data acak, serta LKPD Skenario Misi.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-dot text-brandYellow-500 text-xs mt-1"></i>
+                                <span>Penyampaian aturan main, kriteria penilaian kelompok, dan target hasil penyelidikan.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-200 bg-white p-3 rounded-xl">
+                        <span class="text-xs font-bold text-slate-700 block mb-1">Output Tahap 1:</span>
+                        <p class="text-xs text-slate-500">Siswa terbagi dalam kelompok detektif dan memahami target kasus yang harus dipecahkan.</p>
+                    </div>
+                </div>
+
+                <!-- Stage 2 -->
+                <div class="bg-slate-50 border-2 border-brandYellow-400/50 rounded-2xl p-6 relative hover:border-brandYellow-400 transition-all flex flex-col justify-between shadow-md">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-10 h-10 rounded-xl bg-brandYellow-400 text-brandBlue-900 font-black text-lg flex items-center justify-center shadow">2</span>
+                            <span class="text-xs font-bold text-brandBlue-900 bg-brandYellow-100 px-3 py-1 rounded-full uppercase">Tahap Investigasi</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Tahap Pelaksanaan</h3>
+                        <p class="text-xs text-brandBlue-600 font-semibold mb-4">Investigation & Data Analysis</p>
+
+                        <ul class="text-sm text-slate-600 space-y-3">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-dot text-brandBlue-900 text-xs mt-1"></i>
+                                <span>Siswa berdiskusi mengumpulkan dan mengelompokkan Kartu Data yang relevan.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-dot text-brandBlue-900 text-xs mt-1"></i>
+                                <span>Melakukan perhitungan statistik (Mean, Median, Modus) pada tabel investigasi LKPD.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-dot text-brandBlue-900 text-xs mt-1"></i>
+                                <span>Menggambar visualisasi diagram (batang/lingkaran) sesuai temuan data penyelidikan.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-200 bg-white p-3 rounded-xl">
+                        <span class="text-xs font-bold text-slate-700 block mb-1">Output Tahap 2:</span>
+                        <p class="text-xs text-slate-500">LKPD terisi lengkap dengan analisis data numerik dan visualisasi grafik.</p>
+                    </div>
+                </div>
+
+                <!-- Stage 3 -->
+                <div class="bg-slate-50 border-2 border-brandBlue-900/20 rounded-2xl p-6 relative hover:border-brandYellow-400 transition-all flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-10 h-10 rounded-xl bg-brandBlue-900 text-brandYellow-400 font-black text-lg flex items-center justify-center shadow">3</span>
+                            <span class="text-xs font-bold text-brandBlue-900 bg-brandBlue-100 px-3 py-1 rounded-full uppercase">Tahap Evaluasi</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Tahap Refleksi & Evaluasi</h3>
+                        <p class="text-xs text-brandBlue-600 font-semibold mb-4">Presentation & Debrief</p>
+
+                        <ul class="text-sm text-slate-600 space-y-3">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-dot text-brandYellow-500 text-xs mt-1"></i>
+                                <span>Perwakilan tim mempresentasikan "Laporan Hasil Penyelidikan Kasus" di depan kelas.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-dot text-brandYellow-500 text-xs mt-1"></i>
+                                <span>Tanya jawab antar tim detektif dan klarifikasi konsep statistik oleh guru.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-dot text-brandYellow-500 text-xs mt-1"></i>
+                                <span>Refleksi pengalaman belajar dan pemberian penghargaan (*Badge Detektif Terbaik*).</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-200 bg-white p-3 rounded-xl">
+                        <span class="text-xs font-bold text-slate-700 block mb-1">Output Tahap 3:</span>
+                        <p class="text-xs text-slate-500">Pemahaman konsep terkonfirmasi dan adanya umpan balik konstruktif.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation & Testimonial Section -->
+    <section id="dokumentasi" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brandBlue-600 mb-2">Aktivitas & Respon</h2>
+                <p class="text-3xl font-extrabold text-slate-900">Dokumentasi Inovasi</p>
+                <div class="w-16 h-1 bg-brandYellow-400 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <!-- Image Gallery Mockup -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                    <div class="h-48 bg-slate-800 relative flex items-center justify-center text-slate-400">
+                        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=600&q=80" alt="Siswa Berdiskusi" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x400/1e3a8a/facc15?text=Siswa+Menganalisis+Kartu+Data'">
+                        <span class="absolute top-3 left-3 bg-brandBlue-900/90 text-brandYellow-300 text-xs font-bold px-2.5 py-1 rounded-md">Tahap Pelaksanaan</span>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-slate-800 text-sm">Diskusi Kelompok Detektif Data</h4>
+                        <p class="text-xs text-slate-500 mt-1">Siswa tampak antusias mengelompokkan Kartu Data untuk menemukan nilai rata-rata sampel.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                    <div class="h-48 bg-slate-800 relative flex items-center justify-center text-slate-400">
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" alt="Presentasi Pembelajaran" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x400/1e3a8a/facc15?text=Presentasi+Hasil+LKPD'">
+                        <span class="absolute top-3 left-3 bg-brandYellow-400 text-brandBlue-900 text-xs font-bold px-2.5 py-1 rounded-md">Tahap Presentasi</span>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-slate-800 text-sm">Pemaparan Hasil Penyelidikan</h4>
+                        <p class="text-xs text-slate-500 mt-1">Perwakilan kelompok menyajikan kesimpulan grafik data di hadapan rekan sejawat.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all sm:col-span-2 lg:col-span-1">
+                    <div class="h-48 bg-slate-800 relative flex items-center justify-center text-slate-400">
+                        <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=600&q=80" alt="Bimbingan Guru" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x400/1e3a8a/facc15?text=Fasilitasi+dan+Refleksi+Guru'">
+                        <span class="absolute top-3 left-3 bg-brandBlue-900/90 text-brandYellow-300 text-xs font-bold px-2.5 py-1 rounded-md">Fasilitasi Guru</span>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-slate-800 text-sm">Bimbingan Terarah & Scaffolding</h4>
+                        <p class="text-xs text-slate-500 mt-1">Guru memberikan konfirmasi konsep dan apresiasi terhadap penyelesaian misi.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid md:grid-cols-2 gap-6">
+                
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative">
+                    <i class="fa-solid fa-quote-right text-4xl text-slate-100 absolute top-4 right-4"></i>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-brandYellow-400 text-brandBlue-900 font-bold flex items-center justify-center">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">Ahmad R.</h4>
+                            <p class="text-xs text-slate-500">Siswa Kelas VIII</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed italic">
+                        "Belajar matematika data jadi seru banget! Rasanya seperti main gim detektif tebak rahasia, bukan cuma menghitung rumus biasa."
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative">
+                    <i class="fa-solid fa-quote-right text-4xl text-slate-100 absolute top-4 right-4"></i>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-brandBlue-900 text-brandYellow-400 font-bold flex items-center justify-center">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">Siti Nurhaliza, S.Pd.</h4>
+                            <p class="text-xs text-slate-500">Rekan Guru Matematika</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed italic">
+                        "Inovasi ini sangat praktis dan terstruktur. Keterlibatan siswa meningkat pesat, terutama saat mencocokkan Kartu Data dengan LKPD."
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brandBlue-900 text-white py-12 border-t-4 border-brandYellow-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <div class="flex items-center justify-center sm:justify-start space-x-3 mb-3">
+                        <div class="w-9 h-9 rounded-lg bg-brandYellow-400 text-brandBlue-900 flex items-center justify-center font-black">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+                        <span class="text-lg font-bold text-white">Detektif Data</span>
+                    </div>
+                    <p class="text-xs text-slate-300 max-w-md">
+                        Media Pembelajaran Terintegrasi Kartu Data dan LKPD Detektif Data. Dikembangkan untuk memperkuat literasi data dan pemikiran kritis siswa secara interaktif.
+                    </p>
+                </div>
+                <div class="text-center sm:text-right space-y-2">
+                    <p class="text-xs text-brandYellow-400 font-semibold">Portofolio Inovasi Pembelajaran Matematika</p>
+                    <p class="text-xs text-slate-400">&copy; 2026 Tim Inovasi Pembelajaran. Hak Cipta Dilindungi.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL 1: PREVIEW KARTU DATA -->
+    <div id="modal-kartu" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl transform transition-all">
+            <div class="bg-brandBlue-900 p-4 text-white flex justify-between items-center">
+                <h3 class="font-bold flex items-center gap-2 text-sm">
+                    <i class="fa-solid fa-id-card text-brandYellow-400"></i> Simulasi Kartu Data Fisik
+                </h3>
+                <button onclick="closeModal('modal-kartu')" class="text-slate-300 hover:text-white text-lg font-bold">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="p-6 bg-slate-100">
+                <!-- Preview Card Layout -->
+                <div class="bg-white border-2 border-brandBlue-900 rounded-xl p-5 shadow-md relative">
+                    <div class="flex justify-between items-center border-b pb-3 mb-3">
+                        <span class="text-xs font-black bg-brandYellow-400 text-brandBlue-900 px-2 py-0.5 rounded uppercase">KARTU DATA #04</span>
+                        <span class="text-xs text-slate-500 font-semibold">Kategori: Penjualan Kantin</span>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+                            <p class="text-xs text-slate-500 font-semibold">Skenario Bukti:</p>
+                            <p class="text-xs text-slate-800 font-medium">"Hari Senin tercatat penjualan 15 porsi soto, 22 porsi bakso, dan 18 botol minum."</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                            <div class="bg-brandBlue-50 p-2 rounded border border-brandBlue-100">
+                                <span class="block text-slate-500 text-[10px]">Data A</span>
+                                <span class="font-bold text-brandBlue-900 text-sm">15</span>
+                            </div>
+                            <div class="bg-brandBlue-50 p-2 rounded border border-brandBlue-100">
+                                <span class="block text-slate-500 text-[10px]">Data B</span>
+                                <span class="font-bold text-brandBlue-900 text-sm">22</span>
+                            </div>
+                            <div class="bg-brandBlue-50 p-2 rounded border border-brandBlue-100">
+                                <span class="block text-slate-500 text-[10px]">Data C</span>
+                                <span class="font-bold text-brandBlue-900 text-sm">18</span>
+                            </div>
+                        </div>
+
+                        <div class="p-2.5 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-800">
+                            <i class="fa-solid fa-lightbulb text-brandYellow-600 mr-1"></i>
+                            <strong>Petunjuk Detektif:</strong> Temukan item mana yang menjadi *Modus* utama!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-slate-50 px-6 py-3 border-t text-right">
+                <button onclick="closeModal('modal-kartu')" class="px-4 py-2 bg-brandBlue-900 text-white rounded-lg text-xs font-bold hover:bg-brandBlue-800">
+                    Tutup Pratinjau
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: PREVIEW LKPD -->
+    <div id="modal-lkpd" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl transform transition-all">
+            <div class="bg-brandYellow-400 p-4 text-brandBlue-900 flex justify-between items-center">
+                <h3 class="font-bold flex items-center gap-2 text-sm">
+                    <i class="fa-solid fa-file-lines text-brandBlue-900"></i> Struktur LKPD Detektif Data
+                </h3>
+                <button onclick="closeModal('modal-lkpd')" class="text-brandBlue-900 hover:text-slate-800 text-lg font-bold">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="p-6 bg-slate-100 space-y-3">
+                <div class="bg-white p-4 rounded-xl border border-slate-300 text-xs space-y-3 shadow-sm">
+                    <div class="text-center border-b pb-2">
+                        <h4 class="font-bold text-slate-900 uppercase">BERKAS INVESTIGASI DATA (LKPD)</h4>
+                        <p class="text-[10px] text-slate-500">Nama Tim / Detektif: ______________</p>
+                    </div>
+
+                    <div class="space-y-1">
+                        <p class="font-bold text-brandBlue-900"> Bagian 1: Rumusan Masalah Kasus</p>
+                        <div class="h-8 bg-slate-50 rounded border border-slate-200 p-1.5 text-slate-400">Tuliskan tujuan penyelidikan...</div>
+                    </div>
+
+                    <div class="space-y-1">
+                        <p class="font-bold text-brandBlue-900"> Bagian 2: Tabel Matriks Analisis (Mean/Median/Modus)</p>
+                        <div class="border rounded border-slate-200 overflow-hidden">
+                            <div class="grid grid-cols-3 bg-slate-100 p-1 font-bold text-[10px] text-slate-700">
+                                <span>No Kartu</span>
+                                <span>Nilai Data</span>
+                                <span>Frekuensi</span>
+                            </div>
+                            <div class="grid grid-cols-3 p-1 text-[10px] border-t">
+                                <span>Kartu #01</span>
+                                <span>15, 22, 18</span>
+                                <span>3 Item</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-1">
+                        <p class="font-bold text-brandBlue-900"> Bagian 3: Kesimpulan Detektif</p>
+                        <div class="h-10 bg-slate-50 rounded border border-slate-200 p-1.5 text-slate-400">Berdasarkan data yang dianalisis...</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-slate-50 px-6 py-3 border-t text-right">
+                <button onclick="closeModal('modal-lkpd')" class="px-4 py-2 bg-brandBlue-900 text-white rounded-lg text-xs font-bold hover:bg-brandBlue-800">
+                    Tutup Pratinjau
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Logic -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Tab Switching Logic
+        function switchTab(tabId) {
+            // Hide all tab content
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.add('hidden'));
+
+            // Reset active button styles
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brandBlue-900', 'text-white', 'border-brandBlue-900', 'shadow-md');
+                btn.classList.add('bg-slate-100', 'text-slate-700', 'border-slate-200');
+            });
+
+            // Show selected tab content
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+
+            // Highlight active button
+            const activeBtn = document.getElementById('tab-btn-' + tabId);
+            activeBtn.classList.remove('bg-slate-100', 'text-slate-700', 'border-slate-200');
+            activeBtn.classList.add('bg-brandBlue-900', 'text-white', 'border-brandBlue-900', 'shadow-md');
+        }
+
+        // Modal Handler Logic
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+        }
+
+        // Close Modal when clicking outside
+        window.onclick = function(event) {
+            const modalKartu = document.getElementById('modal-kartu');
+            const modalLkpd = document.getElementById('modal-lkpd');
+            if (event.target === modalKartu) {
+                modalKartu.classList.add('hidden');
+            }
+            if (event.target === modalLkpd) {
+                modalLkpd.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
